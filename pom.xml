@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>GOF Design Patterns</name>
     <description>
-        JavaCode voor designpatterns cursus.
+        Java implementation of designpatterns.
     </description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

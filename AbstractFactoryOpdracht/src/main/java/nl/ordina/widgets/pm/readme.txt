@@ -1,1 +1,0 @@
-Maak hier voor pm de window, scrollbar en de bijbehorende AbstractFactory aan.

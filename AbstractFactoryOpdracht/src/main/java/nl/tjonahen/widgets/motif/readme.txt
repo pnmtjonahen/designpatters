@@ -1,0 +1,1 @@
+Create the motif widgets and corresponding concrete factory.
