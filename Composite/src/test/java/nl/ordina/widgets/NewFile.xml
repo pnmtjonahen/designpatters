@@ -1,0 +1,63 @@
+<okcancel
+<box>
+<line>
+<point x='10' y='10' />
+<point x='10' y='110' />
+</line>
+<line>
+<point x='10' y='10' />
+<point x='60' y='10' />
+</line>
+<line>
+<point x='60' y='10' />
+<point x='60' y='110' />
+</line>
+<line>
+<point x='10' y='110' />
+<point x='60' y='110' />
+</line>
+<text>En werkt het?</text>
+<button>
+<box>
+<line>
+<point x='35' y='60' />
+<point x='35' y='110' />
+</line>
+<line>
+<point x='35' y='60' />
+<point x='60' y='60' />
+</line>
+<line>
+<point x='60' y='60' />
+<point x='60' y='110' />
+</line>
+<line>
+<point x='35' y='110' />
+<point x='60' y='110' />
+</line>
+<text>OK</text>
+</box>
+</button>
+<button>
+<box>
+<line>
+<point x='65' y='60' />
+<point x='65' y='110' />
+</line>
+<line>
+<point x='65' y='60' />
+<point x='90' y='60' />
+</line>
+<line>
+<point x='90' y='60' />
+<point x='90' y='110' />
+</line>
+<line>
+<point x='65' y='110' />
+<point x='90' y='110' />
+</line>
+<text>Cancel</text>
+</box>
+</button>
+</box>
+</okcancel>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0         http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>nl.tjonahen</groupId>
+    <artifactId>patterns</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>GOF Design Patterns</name>
+    <description>
+        JavaCode voor designpatterns cursus.
+    </description>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.license>gpl30</netbeans.hint.license>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <modules>
+        <module>AbstractFactory</module>
+        <module>AbstractFactoryOpdracht</module>
+        <module>Adapter</module>
+        <module>AdapterBank</module>
+        <module>Bridge</module>
+        <module>Builder</module>
+        <module>BuilderOpdracht</module>
+        <module>ChainOfResponsibility</module>
+        <module>Command</module>
+        <module>Composite</module>
+        <module>Decorator</module>
+        <module>Facade</module>
+        <module>FacadeEnVisitor</module>
+        <module>FactoryMethod</module>
+        <module>Flyweight</module>
+        <module>Iterator</module>
+        <module>Mediator</module>
+        <module>Memento</module>
+        <module>Observer</module>
+        <module>Prototype</module>
+        <module>Proxy</module>
+        <module>Singleton</module>
+        <module>State</module>
+        <module>Strategy</module>
+        <module>TemplateMethod</module>
+        <module>Visitor</module>
+    </modules>
+</project>

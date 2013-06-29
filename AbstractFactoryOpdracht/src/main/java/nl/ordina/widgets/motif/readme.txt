@@ -1,0 +1,1 @@
+Maak hier voor motif de window, scrollbar en de bijbehorende AbstractFactory aan.
