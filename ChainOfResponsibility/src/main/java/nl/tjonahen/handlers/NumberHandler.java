@@ -15,14 +15,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */package nl.tjonahen.handlers;
 
+/**
+ * Number handler.
+ *
+ * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
+ */
 public class NumberHandler extends Handler {
 
-    public NumberHandler(Handler successor) {
+    public NumberHandler(final Handler successor) {
         super(successor);
     }
 
     @Override
-    public void handle(String input) {
+    public void handle(final String input) {
         if (input.startsWith("#")) {
             System.out.println(input.substring(1));
         } else {

@@ -36,7 +36,7 @@ public class AddAcceptVisitor extends UnparseVisitor
     super(o);
   }
 
-
+  @Override
   public Object visit(ASTClassBodyDeclaration node, Object data)
   {
     /* Are we the first child of our parent? */

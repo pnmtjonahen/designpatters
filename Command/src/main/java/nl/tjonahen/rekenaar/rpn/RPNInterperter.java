@@ -19,17 +19,29 @@ package nl.tjonahen.rekenaar.rpn;
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.tjonahen.rekenaar.command.ICommand;
+import nl.tjonahen.rekenaar.command.Command;
 
+/**
+ * Reverse Polish Notation (RPN) script interpreter.
+ *
+ * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
+ */
 public class RPNInterperter {
     // operator := '+'|'-'|'/'|'*'
     // NUM := ^[0-9]*.[0-9]            => double
     // term : NUM operator
     // StartNum ( term )*;
 
-    public List<ICommand> parse(String script) throws ParseException {
-        List<ICommand> list = new ArrayList<ICommand>();
-        StartNum sn = new StartNum();
+    /**
+     * Parses a script into a list of commands.
+     * 
+     * @param script -
+     * @return -
+     * @throws ParseException - 
+     */
+    public List<Command> parse(final String script) throws ParseException {
+        final List<Command> list = new ArrayList<>();
+        final StartNum sn = new StartNum();
         sn.parse(script, list);
         return list;
     }

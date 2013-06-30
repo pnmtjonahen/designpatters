@@ -18,9 +18,21 @@ package nl.tjonahen.rekenaar.command;
 
 import java.util.Stack;
 
-public class Pop implements ICommand {
-
-    public void execute(Stack<Double> stack) {
-        System.out.println(stack.pop().toString());
+/**
+ * Pops an element from the stack.
+ *
+ * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
+ */
+public class Pop implements Command {
+    private Double value;
+    @Override
+    public void execute(final Stack<Double> stack) {
+        value = stack.pop();
     }
+
+    public Double getValue() {
+        return value;
+    }
+    
+    
 }

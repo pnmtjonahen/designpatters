@@ -20,33 +20,32 @@ import java.util.List;
 
 
 
-import nl.tjonahen.rekenaar.command.Deel;
-import nl.tjonahen.rekenaar.command.ICommand;
-import nl.tjonahen.rekenaar.command.Maal;
-import nl.tjonahen.rekenaar.command.Min;
-import nl.tjonahen.rekenaar.command.Plus;
+import nl.tjonahen.rekenaar.command.Dvivider;
+import nl.tjonahen.rekenaar.command.Command;
+import nl.tjonahen.rekenaar.command.Multiplier;
+import nl.tjonahen.rekenaar.command.Substractor;
+import nl.tjonahen.rekenaar.command.Addition;
 
 public class Operation {
 
-    public String parse(String str, List<ICommand> script) throws ParseException {
+    public String parse(final String str, final List<Command> script) throws ParseException {
         if ("".equals(str)) {
             return str;
         }
-        char token = str.charAt(0);
-
+        final char token = str.charAt(0);
 
         switch (token) {
             case '+':
-                script.add(new Plus());
+                script.add(new Addition());
                 break;
             case '-':
-                script.add(new Min());
+                script.add(new Substractor());
                 break;
             case '/':
-                script.add(new Deel());
+                script.add(new Dvivider());
                 break;
             case '*':
-                script.add(new Maal());
+                script.add(new Multiplier());
                 break;
             default:
                 throw new ParseException();

@@ -21,9 +21,9 @@ package nl.tjonahen;
  */
 public class Engineer {
 
-    private Machine machine;
+    private final Machine machine;
 
-    public Engineer(Machine machine) {
+    public Engineer(final Machine machine) {
         this.machine = machine;
     }
 

@@ -18,23 +18,23 @@ package nl.tjonahen.rekenaar.rpn;
 
 import java.util.List;
 
-import nl.tjonahen.rekenaar.command.ICommand;
+import nl.tjonahen.rekenaar.command.Command;
 
 public class Term {
 
     private final Num num = new Num();
     private final Operation op = new Operation();
 
-    public String parse(String str, List<ICommand> script) throws ParseException {
-        if ("".equals(str)) {
-            return str;
+    public String parse(final String str, final List<Command> script) throws ParseException {
+        String tmpstr = str;
+        if ("".equals(tmpstr)) {
+            return tmpstr;
         }
 
 
-        str = num.parse(str, script);
-        str = op.parse(str, script);
+        tmpstr = num.parse(tmpstr, script);
+        tmpstr = op.parse(tmpstr, script);
 
-        return parse(str, script);
-
+        return parse(tmpstr, script);
     }
 }

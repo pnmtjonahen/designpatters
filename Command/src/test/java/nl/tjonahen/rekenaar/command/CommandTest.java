@@ -19,7 +19,8 @@ package nl.tjonahen.rekenaar.command;
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.tjonahen.rekenaar.Rekenaar;
+import nl.tjonahen.rekenaar.Calculator;
+import org.junit.Assert;
 
 import org.junit.Test;
 
@@ -27,61 +28,72 @@ public class CommandTest {
 
     @Test
     public void plusTest() {
-        Rekenaar r = new Rekenaar();
+        final Calculator r = new Calculator();
 
 
-        List<ICommand> script = new ArrayList<>();
+        final List<Command> script = new ArrayList<>();
 // RPN Reverse Polish Notation
 // 10, 10, +
         script.add(new Push(new Double(10)));
         script.add(new Push(new Double(10)));
-        script.add(new Plus());
-        script.add(new Pop());
+        script.add(new Addition());
+        final Pop pop = new Pop();
+        script.add(pop);
         r.execute(script);
+
+        Assert.assertEquals(20.0, pop.getValue().doubleValue(), 0.0);
     }
 
     @Test
     public void minTest() {
-        Rekenaar r = new Rekenaar();
+        final Calculator r = new Calculator();
 
 
-        List<ICommand> script = new ArrayList<>();
+        final List<Command> script = new ArrayList<>();
 // RPN Reverse Polish Notation
-// 10, 10, +
+// 10, 10, -
         script.add(new Push(new Double(10)));
         script.add(new Push(new Double(10)));
-        script.add(new Min());
-        script.add(new Pop());
+        script.add(new Substractor());
+        final Pop pop = new Pop();
+        script.add(pop);
         r.execute(script);
+        Assert.assertEquals(0.0, pop.getValue().doubleValue(), 0.0);
     }
 
     @Test
     public void maalTest() {
-        Rekenaar r = new Rekenaar();
+        final Calculator r = new Calculator();
 
 
-        List<ICommand> script = new ArrayList<>();
+        final List<Command> script = new ArrayList<>();
 // RPN Reverse Polish Notation
-// 10, 10, +
+// 10, 10, *
         script.add(new Push(new Double(10)));
         script.add(new Push(new Double(10)));
-        script.add(new Maal());
-        script.add(new Pop());
+        script.add(new Multiplier());
+        final Pop pop = new Pop();
+        script.add(pop);
         r.execute(script);
+        Assert.assertEquals(100.0, pop.getValue().doubleValue(), 0.0);
+
     }
 
     @Test
     public void deelTest() {
-        Rekenaar r = new Rekenaar();
+        final Calculator r = new Calculator();
 
 
-        List<ICommand> script = new ArrayList<>();
+        final List<Command> script = new ArrayList<>();
 // RPN Reverse Polish Notation
-// 10, 10, +
+// 10, 10, /
         script.add(new Push(new Double(10)));
         script.add(new Push(new Double(10)));
-        script.add(new Deel());
-        script.add(new Pop());
+        script.add(new Dvivider());
+        final Pop pop = new Pop();
+        script.add(pop);
         r.execute(script);
+        Assert.assertEquals(1.0, pop.getValue().doubleValue(), 0.0);
+
     }
 }

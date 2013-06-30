@@ -18,15 +18,21 @@ package nl.tjonahen.rekenaar.command;
 
 import java.util.Stack;
 
-public class Push implements ICommand {
+/**
+ * Push value on the stack.
+ *
+ * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
+ */
+public class Push implements Command {
 
-    private Double val;
+    private final Double value;
 
-    public Push(Double i) {
-        val = i;
+    public Push(final Double value) {
+        this.value = value;
     }
 
-    public void execute(Stack<Double> stack) {
-        stack.push(val);
+    @Override
+    public void execute(final Stack<Double> stack) {
+        stack.push(value);
     }
 }

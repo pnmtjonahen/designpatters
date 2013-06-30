@@ -21,6 +21,11 @@ import java.util.List;
 import nl.tjonahen.rekenaar.rpn.ParseException;
 import nl.tjonahen.rekenaar.rpn.RPNInterperter;
 
+/**
+ * Script factory. Not really part of the pattern.
+ * 
+ * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
+ */
 public class ScriptFactory {
 
     private RPNInterperter rpn = new RPNInterperter();
@@ -34,7 +39,7 @@ public class ScriptFactory {
 
     }
 
-    public List<ICommand> create(String script) throws ParseException {
+    public List<Command> create(final String script) throws ParseException {
         return rpn.parse(script);
     }
 }

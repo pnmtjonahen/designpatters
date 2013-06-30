@@ -28,7 +28,8 @@ public class HandlerTest {
     @Test
     public void testChain() {
         // setup de chain
-        Handler h = new Handler(new NumberHandler(new Handler(new AlphaHandler(new Handler(new NullHandler(null))))));
+        final Handler h = new Handler(new NumberHandler(new Handler(new AlphaHandler(new Handler(new NullHandler(null))))));
+        
         h.handle("Dit is een string");
         h.handle("#nummer");
         h.handle("@alpha");

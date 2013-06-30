@@ -16,15 +16,20 @@
  */
 package nl.tjonahen.handlers;
 
+/**
+ * Simple handler.
+ *
+ * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
+ */
 public class Handler {
 
-    private Handler successor;
+    private final Handler successor;
 
-    public Handler(Handler successor) {
+    public Handler(final Handler successor) {
         this.successor = successor;
     }
 
-    public void handle(String input) {
+    public void handle(final String input) {
         if (successor != null) {
             successor.handle(input);
         }

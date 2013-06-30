@@ -16,14 +16,19 @@
  */
 package nl.tjonahen.handlers;
 
+/**
+ * Handles Alpha characters
+ *
+ * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
+ */
 public class AlphaHandler extends Handler {
 
-    public AlphaHandler(Handler successor) {
+    public AlphaHandler(final Handler successor) {
         super(successor);
     }
 
     @Override
-    public void handle(String input) {
+    public void handle(final String input) {
         if (input.startsWith("@")) {
             System.err.println(input.substring(1));
         } else {
