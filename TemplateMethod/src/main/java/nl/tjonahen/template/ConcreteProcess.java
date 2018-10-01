@@ -20,7 +20,7 @@ public class ConcreteProcess extends ProcessTemplate {
 
     @Override
     protected void process() {
-        System.out.println("Uitvoeren van het process.");
+        System.out.println("Concrete doet ook nog iets");
 
     }
 }

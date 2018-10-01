@@ -22,9 +22,13 @@ abstract public class ProcessTemplate {
      * Define a process and let subclasses redefine certain steps.
      */
     public void templateMethod() {
+        System.out.println("iets");
         preProcess();
+        System.out.println("nog iets");
         process();
+        System.out.println("en nog meer");
         postProcess();
+        System.out.println("en als laatste nog iets");
     }
 
     protected void preProcess() {

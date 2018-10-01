@@ -20,13 +20,13 @@ public class PreProcess extends ProcessTemplate {
 
     @Override
     protected void preProcess() {
-        System.out.println("Uitvoeren van het preProcess");
+        System.out.println("preProcess");
 
     }
 
     @Override
     protected void process() {
-        System.out.println("Uitvoeren van het process");
+        System.out.println("Preprocess mag ook iets doen");
 
     }
 }
