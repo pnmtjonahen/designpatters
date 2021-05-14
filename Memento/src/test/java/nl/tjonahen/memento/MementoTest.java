@@ -17,8 +17,8 @@
 package nl.tjonahen.memento;
 
 import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
 
 public class MementoTest {
 

@@ -17,8 +17,7 @@
 package nl.tjonahen.service;
 
 import nl.tjonahen.proxy.SecureProxy;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ProxyTests {
 

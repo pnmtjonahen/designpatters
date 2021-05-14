@@ -20,8 +20,7 @@ import nl.tjonahen.handlers.AlphaHandler;
 import nl.tjonahen.handlers.Handler;
 import nl.tjonahen.handlers.NullHandler;
 import nl.tjonahen.handlers.NumberHandler;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class HandlerTest {
 

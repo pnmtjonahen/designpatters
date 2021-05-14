@@ -18,8 +18,8 @@ package nl.tjonahen.rekenaar.command;
 
 import nl.tjonahen.rekenaar.Calculator;
 import nl.tjonahen.rekenaar.rpn.ParseException;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
 
 public class ScriptFactoryTest {
 

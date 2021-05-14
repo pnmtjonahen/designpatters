@@ -19,8 +19,8 @@ package nl.tjonahen;
 import nl.tjonahen.template.ConcreteProcess;
 import nl.tjonahen.template.PreProcess;
 import nl.tjonahen.template.ProcessTemplate;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
 
 public class TemplateTest {
 

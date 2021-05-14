@@ -18,11 +18,9 @@ package nl.tjonahen.rekenaar.command;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import nl.tjonahen.rekenaar.Calculator;
-import org.junit.Assert;
-
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class CommandTest {
 
@@ -41,7 +39,7 @@ public class CommandTest {
         script.add(pop);
         r.execute(script);
 
-        Assert.assertEquals(20.0, pop.getValue().doubleValue(), 0.0);
+        assertEquals(20.0, pop.getValue().doubleValue(), 0.0);
     }
 
     @Test
@@ -58,7 +56,7 @@ public class CommandTest {
         final Pop pop = new Pop();
         script.add(pop);
         r.execute(script);
-        Assert.assertEquals(0.0, pop.getValue().doubleValue(), 0.0);
+        assertEquals(0.0, pop.getValue().doubleValue(), 0.0);
     }
 
     @Test
@@ -75,7 +73,7 @@ public class CommandTest {
         final Pop pop = new Pop();
         script.add(pop);
         r.execute(script);
-        Assert.assertEquals(100.0, pop.getValue().doubleValue(), 0.0);
+        assertEquals(100.0, pop.getValue().doubleValue(), 0.0);
 
     }
 
@@ -93,7 +91,7 @@ public class CommandTest {
         final Pop pop = new Pop();
         script.add(pop);
         r.execute(script);
-        Assert.assertEquals(1.0, pop.getValue().doubleValue(), 0.0);
+        assertEquals(1.0, pop.getValue().doubleValue(), 0.0);
 
     }
 }

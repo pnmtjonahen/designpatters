@@ -20,8 +20,8 @@ import nl.tjonahen.context.Context;
 import nl.tjonahen.strategy.SevereLevelLogStrategy;
 import nl.tjonahen.strategy.SystemErrStrategy;
 import nl.tjonahen.strategy.SystemOutStrategy;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
 
 public class StrategyTest {
 

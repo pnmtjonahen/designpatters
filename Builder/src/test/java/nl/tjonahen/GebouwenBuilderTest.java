@@ -19,9 +19,9 @@ package nl.tjonahen;
 import nl.tjonahen.builders.BungalowBuilder;
 import nl.tjonahen.builders.BunkerBuilder;
 import nl.tjonahen.builders.FlatBuilder;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Assert;
-import org.junit.Test;
 
 /**
  * Client deel van het builder pattern.
@@ -40,7 +40,7 @@ public class GebouwenBuilderTest {
         Aannemer kees = new Aannemer(concreteBuilder);
         kees.construct();
 
-        Assert.assertNotNull(concreteBuilder.getGebouw());
+        assertNotNull(concreteBuilder.getGebouw());
 
     }
 
@@ -51,7 +51,7 @@ public class GebouwenBuilderTest {
         Aannemer kees = new Aannemer(concreteBuilder);
         kees.construct();
 
-        Assert.assertNotNull(concreteBuilder.getGebouw());
+        assertNotNull(concreteBuilder.getGebouw());
     }
 
     @Test
@@ -61,6 +61,6 @@ public class GebouwenBuilderTest {
         Aannemer kees = new Aannemer(concreteBuilder);
         kees.construct();
 
-        Assert.assertNotNull(concreteBuilder.getGebouw());
+        assertNotNull(concreteBuilder.getGebouw());
     }
 }

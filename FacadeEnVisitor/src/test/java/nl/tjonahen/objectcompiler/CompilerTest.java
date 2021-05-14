@@ -18,8 +18,9 @@ package nl.tjonahen.objectcompiler;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+
 
 public class CompilerTest {
 

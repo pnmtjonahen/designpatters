@@ -16,8 +16,8 @@
  */
 package nl.tjonahen.widgets;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test different AbstractFactory implementations.
@@ -46,8 +46,8 @@ public class AbstractFactoryTest {
      */
     private void testWidgetFactory(final WidgetFactory widgetFactory) {
 
-        Assert.assertNotNull(widgetFactory.createWindow());
-        Assert.assertNotNull(widgetFactory.createScrollBar());
+        assertNotNull(widgetFactory.createWindow());
+        assertNotNull(widgetFactory.createScrollBar());
 
     }
 }
