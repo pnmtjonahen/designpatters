@@ -24,7 +24,6 @@ public class WidgetFactoryImpl implements WidgetFactory {
 
   @Override
   public ScrollBar createScrollBar() {
-    System.out.println("motif");
     return new ScrollBarImpl();
   }
 

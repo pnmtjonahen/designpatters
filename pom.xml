@@ -96,5 +96,6 @@
         <module>Strategy</module>
         <module>TemplateMethod</module>
         <module>Visitor</module>
+        <module>LombokBuilder</module>
     </modules>
 </project>
