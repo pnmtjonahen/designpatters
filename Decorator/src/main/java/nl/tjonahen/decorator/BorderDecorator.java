@@ -18,17 +18,17 @@ package nl.tjonahen.decorator;
 
 public class BorderDecorator extends Decorator {
 
-    @Override
-    public void draw() {
-        super.draw();
-        borderDraw();
-    }
+  @Override
+  public void draw() {
+    super.draw();
+    borderDraw();
+  }
 
-    private void borderDraw() {
-        System.out.println(getClass().getName() + "->borderDraw");
-    }
+  private void borderDraw() {
+    System.out.println(getClass().getName() + "->borderDraw");
+  }
 
-    public BorderDecorator(final VisualComponent next) {
-        super(next);
-    }
+  public BorderDecorator(final VisualComponent next) {
+    super(next);
+  }
 }

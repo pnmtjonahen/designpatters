@@ -18,7 +18,6 @@ package nl.tjonahen.rekenaar.rpn;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import nl.tjonahen.rekenaar.command.Command;
 
 /**
@@ -27,22 +26,22 @@ import nl.tjonahen.rekenaar.command.Command;
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public class RPNInterperter {
-    // operator := '+'|'-'|'/'|'*'
-    // NUM := ^[0-9]*.[0-9]            => double
-    // term : NUM operator
-    // StartNum ( term )*;
+  // operator := '+'|'-'|'/'|'*'
+  // NUM := ^[0-9]*.[0-9]            => double
+  // term : NUM operator
+  // StartNum ( term )*;
 
-    /**
-     * Parses a script into a list of commands.
-     * 
-     * @param script -
-     * @return -
-     * @throws ParseException - 
-     */
-    public List<Command> parse(final String script) throws ParseException {
-        final List<Command> list = new ArrayList<>();
-        final StartNum sn = new StartNum();
-        sn.parse(script, list);
-        return list;
-    }
+  /**
+   * Parses a script into a list of commands.
+   *
+   * @param script -
+   * @return -
+   * @throws ParseException -
+   */
+  public List<Command> parse(final String script) throws ParseException {
+    final List<Command> list = new ArrayList<>();
+    final StartNum sn = new StartNum();
+    sn.parse(script, list);
+    return list;
+  }
 }

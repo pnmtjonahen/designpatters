@@ -18,13 +18,13 @@ package nl.tjonahen;
 
 public class Rekening {
 
-    private String rekening;
+  private String rekening;
 
-    public String getRekening() {
-        return rekening;
-    }
+  public String getRekening() {
+    return rekening;
+  }
 
-    public void setRekening(final String rekening) {
-        this.rekening = rekening;
-    }
+  public void setRekening(final String rekening) {
+    this.rekening = rekening;
+  }
 }

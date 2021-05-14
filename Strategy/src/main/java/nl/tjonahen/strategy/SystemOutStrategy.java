@@ -18,8 +18,8 @@ package nl.tjonahen.strategy;
 
 public class SystemOutStrategy implements Strategy {
 
-    @Override
-    public void out(final String input) {
-        System.out.println(input);
-    }
+  @Override
+  public void out(final String input) {
+    System.out.println(input);
+  }
 }

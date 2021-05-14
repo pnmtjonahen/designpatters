@@ -18,28 +18,23 @@ package nl.tjonahen.context;
 
 import nl.tjonahen.strategy.Strategy;
 
-/**
- * Strategy bepaald hoe er daadwerkelijk gelogged gaat worden
- *
- *
- */
+/** Strategy bepaald hoe er daadwerkelijk gelogged gaat worden */
 public class Context {
 
-    private Strategy strategy;
+  private Strategy strategy;
 
-    public Context(Strategy strategy) {
-        this.strategy = strategy;
-    }
+  public Context(Strategy strategy) {
+    this.strategy = strategy;
+  }
 
-    public void ibm() {
-        // voer wat uit, doe iets
-        String msg = bepaalIBM();
-        // voer de strategy uit
-        strategy.out(msg);
+  public void ibm() {
+    // voer wat uit, doe iets
+    String msg = bepaalIBM();
+    // voer de strategy uit
+    strategy.out(msg);
+  }
 
-    }
-
-    private String bepaalIBM() {
-        return "Een aanroep van de Interesante Business Methode.";
-    }
+  private String bepaalIBM() {
+    return "Een aanroep van de Interesante Business Methode.";
+  }
 }

@@ -16,5 +16,4 @@
  */
 package nl.tjonahen.car.part;
 
-public class Frame {
-}
+public class Frame {}

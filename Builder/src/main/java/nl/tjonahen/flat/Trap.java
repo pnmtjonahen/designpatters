@@ -18,19 +18,19 @@ package nl.tjonahen.flat;
 
 public class Trap {
 
-    private final Verdieping onder;
-    private final Verdieping boven;
+  private final Verdieping onder;
+  private final Verdieping boven;
 
-    public Trap(final Verdieping onder, final Verdieping boven) {
-        this.onder = onder;
-        this.boven = boven;
-    }
+  public Trap(final Verdieping onder, final Verdieping boven) {
+    this.onder = onder;
+    this.boven = boven;
+  }
 
-    public Verdieping getBoven() {
-        return boven;
-    }
+  public Verdieping getBoven() {
+    return boven;
+  }
 
-    public Verdieping getOnder() {
-        return onder;
-    }
+  public Verdieping getOnder() {
+    return onder;
+  }
 }

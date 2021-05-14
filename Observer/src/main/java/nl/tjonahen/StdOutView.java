@@ -18,7 +18,7 @@ package nl.tjonahen;
 
 public class StdOutView implements Observer {
 
-    public void update(Document document) {
-        System.out.println(document.getText());
-    }
+  public void update(Document document) {
+    System.out.println(document.getText());
+  }
 }

@@ -17,29 +17,27 @@
 package nl.tjonahen.rekenaar.command;
 
 import java.util.List;
-
 import nl.tjonahen.rekenaar.rpn.ParseException;
 import nl.tjonahen.rekenaar.rpn.RPNInterperter;
 
 /**
  * Script factory. Not really part of the pattern.
- * 
+ *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public class ScriptFactory {
 
-    private RPNInterperter rpn = new RPNInterperter();
-    private static ScriptFactory instance = null;
+  private RPNInterperter rpn = new RPNInterperter();
+  private static ScriptFactory instance = null;
 
-    synchronized public static ScriptFactory instance() {
-        if (instance == null) {
-            instance = new ScriptFactory();
-        }
-        return instance;
-
+  public static synchronized ScriptFactory instance() {
+    if (instance == null) {
+      instance = new ScriptFactory();
     }
+    return instance;
+  }
 
-    public List<Command> create(final String script) throws ParseException {
-        return rpn.parse(script);
-    }
+  public List<Command> create(final String script) throws ParseException {
+    return rpn.parse(script);
+  }
 }

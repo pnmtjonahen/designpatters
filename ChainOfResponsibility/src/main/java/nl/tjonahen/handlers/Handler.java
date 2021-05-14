@@ -23,15 +23,15 @@ package nl.tjonahen.handlers;
  */
 public class Handler {
 
-    private final Handler successor;
+  private final Handler successor;
 
-    public Handler(final Handler successor) {
-        this.successor = successor;
-    }
+  public Handler(final Handler successor) {
+    this.successor = successor;
+  }
 
-    public void handle(final String input) {
-        if (successor != null) {
-            successor.handle(input);
-        }
+  public void handle(final String input) {
+    if (successor != null) {
+      successor.handle(input);
     }
+  }
 }

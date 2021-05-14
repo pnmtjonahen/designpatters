@@ -17,17 +17,13 @@
 package nl.tjonahen.tracing.logging;
 
 import java.util.logging.Logger;
-
 import nl.tjonahen.tracing.Target;
 
-/**
- * This adaptee makes it possible for the application to use JUL logging
- *
- */
+/** This adaptee makes it possible for the application to use JUL logging */
 public class LoggingAdaptee implements Target {
 
-    @Override
-    public void trace(final String traceMessage) {
-        Logger.getLogger(getClass().getName(), traceMessage);
-    }
+  @Override
+  public void trace(final String traceMessage) {
+    Logger.getLogger(getClass().getName(), traceMessage);
+  }
 }

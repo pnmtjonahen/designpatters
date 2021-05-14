@@ -20,8 +20,8 @@ import nl.tjonahen.tracing.Target;
 
 public class StdoutAdaptee implements Target {
 
-    @Override
-    public void trace(final String traceMessage) {
-        System.out.println(traceMessage);
-    }
+  @Override
+  public void trace(final String traceMessage) {
+    System.out.println(traceMessage);
+  }
 }

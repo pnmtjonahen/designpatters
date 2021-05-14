@@ -18,12 +18,10 @@ package nl.tjonahen.widgets;
 
 /**
  * Simply a sample class, one of the related classes the factory produces.
+ *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public interface Window {
-    /**
-     * Draw the window. 
-     */
-    void draw();
-
+  /** Draw the window. */
+  void draw();
 }

@@ -18,17 +18,17 @@ package nl.tjonahen.handlers;
 
 public class NullHandler extends Handler {
 
-    public NullHandler(final Handler successor) {
-        super(successor);
-    }
+  public NullHandler(final Handler successor) {
+    super(successor);
+  }
 
-    /**
-     * Last handler in the chain of handlers so no super is called.
-     *
-     * @param input
-     */
-    @Override
-    public void handle(final String input) {
-        System.out.println("Drop-off.");
-    }
+  /**
+   * Last handler in the chain of handlers so no super is called.
+   *
+   * @param input
+   */
+  @Override
+  public void handle(final String input) {
+    System.out.println("Drop-off.");
+  }
 }

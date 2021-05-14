@@ -16,82 +16,77 @@
  */
 package nl.tjonahen.rekenaar.command;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 import nl.tjonahen.rekenaar.Calculator;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class CommandTest {
 
-    @Test
-    public void plusTest() {
-        final Calculator r = new Calculator();
+  @Test
+  public void plusTest() {
+    final Calculator r = new Calculator();
 
+    final List<Command> script = new ArrayList<>();
+    // RPN Reverse Polish Notation
+    // 10, 10, +
+    script.add(new Push(new Double(10)));
+    script.add(new Push(new Double(10)));
+    script.add(new Addition());
+    final Pop pop = new Pop();
+    script.add(pop);
+    r.execute(script);
 
-        final List<Command> script = new ArrayList<>();
-// RPN Reverse Polish Notation
-// 10, 10, +
-        script.add(new Push(new Double(10)));
-        script.add(new Push(new Double(10)));
-        script.add(new Addition());
-        final Pop pop = new Pop();
-        script.add(pop);
-        r.execute(script);
+    assertEquals(20.0, pop.getValue().doubleValue(), 0.0);
+  }
 
-        assertEquals(20.0, pop.getValue().doubleValue(), 0.0);
-    }
+  @Test
+  public void minTest() {
+    final Calculator r = new Calculator();
 
-    @Test
-    public void minTest() {
-        final Calculator r = new Calculator();
+    final List<Command> script = new ArrayList<>();
+    // RPN Reverse Polish Notation
+    // 10, 10, -
+    script.add(new Push(new Double(10)));
+    script.add(new Push(new Double(10)));
+    script.add(new Substractor());
+    final Pop pop = new Pop();
+    script.add(pop);
+    r.execute(script);
+    assertEquals(0.0, pop.getValue().doubleValue(), 0.0);
+  }
 
+  @Test
+  public void maalTest() {
+    final Calculator r = new Calculator();
 
-        final List<Command> script = new ArrayList<>();
-// RPN Reverse Polish Notation
-// 10, 10, -
-        script.add(new Push(new Double(10)));
-        script.add(new Push(new Double(10)));
-        script.add(new Substractor());
-        final Pop pop = new Pop();
-        script.add(pop);
-        r.execute(script);
-        assertEquals(0.0, pop.getValue().doubleValue(), 0.0);
-    }
+    final List<Command> script = new ArrayList<>();
+    // RPN Reverse Polish Notation
+    // 10, 10, *
+    script.add(new Push(new Double(10)));
+    script.add(new Push(new Double(10)));
+    script.add(new Multiplier());
+    final Pop pop = new Pop();
+    script.add(pop);
+    r.execute(script);
+    assertEquals(100.0, pop.getValue().doubleValue(), 0.0);
+  }
 
-    @Test
-    public void maalTest() {
-        final Calculator r = new Calculator();
+  @Test
+  public void deelTest() {
+    final Calculator r = new Calculator();
 
-
-        final List<Command> script = new ArrayList<>();
-// RPN Reverse Polish Notation
-// 10, 10, *
-        script.add(new Push(new Double(10)));
-        script.add(new Push(new Double(10)));
-        script.add(new Multiplier());
-        final Pop pop = new Pop();
-        script.add(pop);
-        r.execute(script);
-        assertEquals(100.0, pop.getValue().doubleValue(), 0.0);
-
-    }
-
-    @Test
-    public void deelTest() {
-        final Calculator r = new Calculator();
-
-
-        final List<Command> script = new ArrayList<>();
-// RPN Reverse Polish Notation
-// 10, 10, /
-        script.add(new Push(new Double(10)));
-        script.add(new Push(new Double(10)));
-        script.add(new Dvivider());
-        final Pop pop = new Pop();
-        script.add(pop);
-        r.execute(script);
-        assertEquals(1.0, pop.getValue().doubleValue(), 0.0);
-
-    }
+    final List<Command> script = new ArrayList<>();
+    // RPN Reverse Polish Notation
+    // 10, 10, /
+    script.add(new Push(new Double(10)));
+    script.add(new Push(new Double(10)));
+    script.add(new Dvivider());
+    final Pop pop = new Pop();
+    script.add(pop);
+    r.execute(script);
+    assertEquals(1.0, pop.getValue().doubleValue(), 0.0);
+  }
 }

@@ -20,10 +20,10 @@ import org.junit.jupiter.api.Test;
 
 public class MediatorTest {
 
-    @Test
-    public void testMediator() {
-        MyMediator m = new MyMediator();
+  @Test
+  public void testMediator() {
+    MyMediator m = new MyMediator();
 
-        m.performIBM();
-    }
+    m.performIBM();
+  }
 }

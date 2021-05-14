@@ -18,5 +18,5 @@ package nl.tjonahen;
 
 public interface Observer {
 
-    void update(Document document);
+  void update(Document document);
 }

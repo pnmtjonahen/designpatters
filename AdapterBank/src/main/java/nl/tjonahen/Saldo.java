@@ -18,13 +18,13 @@ package nl.tjonahen;
 
 public class Saldo {
 
-    private Long saldo;
+  private Long saldo;
 
-    public Long getSaldo() {
-        return saldo;
-    }
+  public Long getSaldo() {
+    return saldo;
+  }
 
-    public void setSaldo(final Long saldo) {
-        this.saldo = saldo;
-    }
+  public void setSaldo(final Long saldo) {
+    this.saldo = saldo;
+  }
 }

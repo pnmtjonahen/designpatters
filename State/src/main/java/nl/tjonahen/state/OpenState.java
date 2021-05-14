@@ -21,18 +21,16 @@ import nl.tjonahen.state.StateFactory.DoorStates;
 
 public class OpenState implements DoorState {
 
-    @Override
-    public void click(final Door door) {
-        door.setDoorState(StateFactory.instance().getState(DoorStates.CLOSING));
+  @Override
+  public void click(final Door door) {
+    door.setDoorState(StateFactory.instance().getState(DoorStates.CLOSING));
+  }
 
-    }
+  @Override
+  public void complete(final Door door) {}
 
-    @Override
-    public void complete(final Door door) {
-    }
-
-    @Override
-    public String toString() {
-        return "open";
-    }
+  @Override
+  public String toString() {
+    return "open";
+  }
 }

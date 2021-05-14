@@ -20,13 +20,12 @@ import nl.tjonahen.rekenaar.Calculator;
 import nl.tjonahen.rekenaar.rpn.ParseException;
 import org.junit.jupiter.api.Test;
 
-
 public class ScriptFactoryTest {
 
-    @Test
-    public void scriptTest() throws ParseException {
-        final Calculator r = new Calculator();
+  @Test
+  public void scriptTest() throws ParseException {
+    final Calculator r = new Calculator();
 
-        r.execute(ScriptFactory.instance().create("10 10 + 10 *"));
-    }
+    r.execute(ScriptFactory.instance().create("10 10 + 10 *"));
+  }
 }

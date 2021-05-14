@@ -18,25 +18,24 @@ package nl.tjonahen.rekenaar;
 
 import java.util.List;
 import java.util.Stack;
-
 import nl.tjonahen.rekenaar.command.Command;
 
 /**
  * A calculator.
- * 
+ *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public class Calculator {
 
-    /**
-     * Executes the command script.
-     * 
-     * @param script - 
-     */
-    public void execute(final List<Command> script) {
-        final Stack<Double> stack = new Stack<>();
-        for (final Command command : script) {
-            command.execute(stack);
-        }
+  /**
+   * Executes the command script.
+   *
+   * @param script -
+   */
+  public void execute(final List<Command> script) {
+    final Stack<Double> stack = new Stack<>();
+    for (final Command command : script) {
+      command.execute(stack);
     }
+  }
 }

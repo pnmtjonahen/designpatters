@@ -21,21 +21,20 @@ import nl.tjonahen.colleagues.ColleagueB;
 
 public class MyMediator implements Mediator {
 
-    private ColleagueA a;
-    private ColleagueB b;
+  private ColleagueA a;
+  private ColleagueB b;
 
-    public MyMediator() {
-        a = new ColleagueA(this);
-        b = new ColleagueB(this);
-    }
+  public MyMediator() {
+    a = new ColleagueA(this);
+    b = new ColleagueB(this);
+  }
 
-    public void performAMethod() {
-        System.out.println("AMethod called");
-        a.perform();
+  public void performAMethod() {
+    System.out.println("AMethod called");
+    a.perform();
+  }
 
-    }
-
-    public void performIBM() {
-        b.perform();
-    }
+  public void performIBM() {
+    b.perform();
+  }
 }

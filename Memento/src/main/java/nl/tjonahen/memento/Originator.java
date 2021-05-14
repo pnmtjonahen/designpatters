@@ -16,45 +16,37 @@
  */
 package nl.tjonahen.memento;
 
-/**
- * Originator. de state van de originator is alleen attrib, Zie ook State.
- *
- *
- */
+/** Originator. de state van de originator is alleen attrib, Zie ook State. */
 public class Originator {
 
-    private int attrib;
-    private String text;
+  private int attrib;
+  private String text;
 
-    public MementoStoreable createMemento() {
-        return new Memento(new State(this));
+  public MementoStoreable createMemento() {
+    return new Memento(new State(this));
+  }
+
+  public void setMemento(MementoStoreable memento) {
+    if (memento instanceof Memento) {
+      ((Memento) memento).getState().update(this);
     }
+  }
 
-    public void setMemento(MementoStoreable memento) {
-        if (memento instanceof Memento) {
-            ((Memento) memento).getState().update(this);
-        }
-    }
+  /** Interesting Business Method nummer 1 */
+  public void IBM1() {
+    attrib++;
+  }
 
-    /**
-     * Interesting Business Method nummer 1
-     *
-     */
-    public void IBM1() {
-        attrib++;
+  public String IBM2() {
+    text = "aantal IBM1's =" + attrib;
+    return text;
+  }
 
-    }
+  public int getAttrib() {
+    return attrib;
+  }
 
-    public String IBM2() {
-        text = "aantal IBM1's =" + attrib;
-        return text;
-    }
-
-    public int getAttrib() {
-        return attrib;
-    }
-
-    public void setAttrib(int attrib) {
-        this.attrib = attrib;
-    }
+  public void setAttrib(int attrib) {
+    this.attrib = attrib;
+  }
 }

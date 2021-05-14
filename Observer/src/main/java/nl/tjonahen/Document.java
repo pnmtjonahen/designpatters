@@ -21,26 +21,26 @@ import java.util.List;
 
 public class Document {
 
-    private String text = "";
-    private List<Observer> observers = new ArrayList<>();
+  private String text = "";
+  private List<Observer> observers = new ArrayList<>();
 
-    private void notifyObservers() {
-        for (Observer observer : observers) {
-            observer.update(this);
-        }
+  private void notifyObservers() {
+    for (Observer observer : observers) {
+      observer.update(this);
     }
+  }
 
-    public void addObserver(Observer o) {
-        observers.add(o);
-    }
+  public void addObserver(Observer o) {
+    observers.add(o);
+  }
 
-    public void append(String text) {
-        this.text += text;
-        // voer wijzigingen op het document door
-        notifyObservers();
-    }
+  public void append(String text) {
+    this.text += text;
+    // voer wijzigingen op het document door
+    notifyObservers();
+  }
 
-    public String getText() {
-        return text;
-    }
+  public String getText() {
+    return text;
+  }
 }

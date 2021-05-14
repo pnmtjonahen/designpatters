@@ -25,8 +25,8 @@ import nl.tjonahen.subsystem.facade.SubSystemFacade;
  */
 public class ClientUsingFacade {
 
-    public static void main(String[] args) {
-        final SubSystemFacade f = new SubSystemFacade();
-        f.performSubSystemServices();
-    }
+  public static void main(String[] args) {
+    final SubSystemFacade f = new SubSystemFacade();
+    f.performSubSystemServices();
+  }
 }

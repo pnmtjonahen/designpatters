@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 
 public class SevereLevelLogStrategy implements Strategy {
 
-    @Override
-    public void out(final String input) {
-        Logger.getLogger(getClass().getName()).log(Level.SEVERE, input);
-    }
+  @Override
+  public void out(final String input) {
+    Logger.getLogger(getClass().getName()).log(Level.SEVERE, input);
+  }
 }

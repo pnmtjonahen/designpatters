@@ -16,5 +16,4 @@
  */
 package nl.tjonahen.plane.part;
 
-public class Tail {
-}
+public class Tail {}

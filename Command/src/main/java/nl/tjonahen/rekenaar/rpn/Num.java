@@ -17,31 +17,29 @@
 package nl.tjonahen.rekenaar.rpn;
 
 import java.util.List;
-
 import nl.tjonahen.rekenaar.command.Command;
 import nl.tjonahen.rekenaar.command.Push;
 
 public class Num {
 
-    public String parse(final String str, final List<Command> script) throws ParseException {
-        final String tmpstr = str.trim();
-        if ("".equals(tmpstr)) {
-            return tmpstr;
-        }
-
-        final String nummer = tmpstr.substring(0, tmpstr.indexOf(' '));
-
-        Double d;
-        try {
-            d = Double.parseDouble(nummer.trim());
-        } catch (NumberFormatException nfe) {
-            System.err.println("Parse error " + nummer);
-            throw new ParseException();
-        }
-
-        script.add(new Push(d));
-
-        return tmpstr.substring(tmpstr.indexOf(' ') + 1);
-
+  public String parse(final String str, final List<Command> script) throws ParseException {
+    final String tmpstr = str.trim();
+    if ("".equals(tmpstr)) {
+      return tmpstr;
     }
+
+    final String nummer = tmpstr.substring(0, tmpstr.indexOf(' '));
+
+    Double d;
+    try {
+      d = Double.parseDouble(nummer.trim());
+    } catch (NumberFormatException nfe) {
+      System.err.println("Parse error " + nummer);
+      throw new ParseException();
+    }
+
+    script.add(new Push(d));
+
+    return tmpstr.substring(tmpstr.indexOf(' ') + 1);
+  }
 }

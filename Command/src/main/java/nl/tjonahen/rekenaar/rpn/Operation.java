@@ -17,39 +17,36 @@
 package nl.tjonahen.rekenaar.rpn;
 
 import java.util.List;
-
-
-
-import nl.tjonahen.rekenaar.command.Dvivider;
+import nl.tjonahen.rekenaar.command.Addition;
 import nl.tjonahen.rekenaar.command.Command;
+import nl.tjonahen.rekenaar.command.Dvivider;
 import nl.tjonahen.rekenaar.command.Multiplier;
 import nl.tjonahen.rekenaar.command.Substractor;
-import nl.tjonahen.rekenaar.command.Addition;
 
 public class Operation {
 
-    public String parse(final String str, final List<Command> script) throws ParseException {
-        if ("".equals(str)) {
-            return str;
-        }
-        final char token = str.charAt(0);
-
-        switch (token) {
-            case '+':
-                script.add(new Addition());
-                break;
-            case '-':
-                script.add(new Substractor());
-                break;
-            case '/':
-                script.add(new Dvivider());
-                break;
-            case '*':
-                script.add(new Multiplier());
-                break;
-            default:
-                throw new ParseException();
-        }
-        return str.substring(1);
+  public String parse(final String str, final List<Command> script) throws ParseException {
+    if ("".equals(str)) {
+      return str;
     }
+    final char token = str.charAt(0);
+
+    switch (token) {
+      case '+':
+        script.add(new Addition());
+        break;
+      case '-':
+        script.add(new Substractor());
+        break;
+      case '/':
+        script.add(new Dvivider());
+        break;
+      case '*':
+        script.add(new Multiplier());
+        break;
+      default:
+        throw new ParseException();
+    }
+    return str.substring(1);
+  }
 }

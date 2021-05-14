@@ -18,23 +18,25 @@ package nl.tjonahen.widgets;
 
 /**
  * Abstract factory implementation.
- * 
- * Provide an interface for creating families of related or dependant objects without specifying their concrete classes.
  *
- * De IWidgetFactory is de abstract factory. All concrete factories must implement this interface.
+ * <p>Provide an interface for creating families of related or dependant objects without specifying
+ * their concrete classes.
  *
- *
+ * <p>De IWidgetFactory is de abstract factory. All concrete factories must implement this
+ * interface.
  */
 public interface WidgetFactory {
-        /**
-         * Create a window.
-         * @return - 
-         */
-	Window createWindow();
-        
-        /**
-         * Create a scrollbar.
-         * @return -
-         */
-	ScrollBar createScrollBar();
+  /**
+   * Create a window.
+   *
+   * @return -
+   */
+  Window createWindow();
+
+  /**
+   * Create a scrollbar.
+   *
+   * @return -
+   */
+  ScrollBar createScrollBar();
 }

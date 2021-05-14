@@ -23,38 +23,40 @@ package nl.tjonahen.state;
  */
 public class StateFactory {
 
-    public enum DoorStates {
+  public enum DoorStates {
+    OPEN,
+    OPENING,
+    CLOSED,
+    CLOSING
+  };
 
-        OPEN, OPENING, CLOSED, CLOSING
-    };
-    private DoorState open = new OpenState();
-    private DoorState closed = new ClosedState();
-    private DoorState closing = new ClosingState();
-    private DoorState opening = new OpeningState();
+  private DoorState open = new OpenState();
+  private DoorState closed = new ClosedState();
+  private DoorState closing = new ClosingState();
+  private DoorState opening = new OpeningState();
 
-    private StateFactory() {
+  private StateFactory() {}
+
+  public DoorState getState(final DoorStates state) {
+    switch (state) {
+      case OPEN:
+        return open;
+      case CLOSED:
+        return closed;
+      case OPENING:
+        return opening;
+      case CLOSING:
+        return closing;
     }
+    return null;
+  }
 
-    public DoorState getState(final DoorStates state) {
-        switch (state) {
-            case OPEN:
-                return open;
-            case CLOSED:
-                return closed;
-            case OPENING:
-                return opening;
-            case CLOSING:
-                return closing;
-        }
-        return null;
+  private static StateFactory instance = null;
+
+  public static final synchronized StateFactory instance() {
+    if (instance == null) {
+      instance = new StateFactory();
     }
-    private static StateFactory instance = null;
-
-    public static final synchronized StateFactory instance() {
-        if (instance == null) {
-            instance = new StateFactory();
-        }
-        return instance;
-
-    }
+    return instance;
+  }
 }

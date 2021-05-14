@@ -21,14 +21,14 @@ import org.junit.jupiter.api.Test;
 
 public class ProxyTests {
 
-    @Test
-    public void testenSecureProxy() {
-        Service s = new SecureProxy(new ServiceImpl());
+  @Test
+  public void testenSecureProxy() {
+    Service s = new SecureProxy(new ServiceImpl());
 
-        s.doeHet();
+    s.doeHet();
 
-        SecureProxy.mag = false;
+    SecureProxy.mag = false;
 
-        s.doeHet();
-    }
+    s.doeHet();
+  }
 }

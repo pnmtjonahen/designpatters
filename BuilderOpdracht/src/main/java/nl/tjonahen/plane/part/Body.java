@@ -16,5 +16,4 @@
  */
 package nl.tjonahen.plane.part;
 
-public class Body {
-}
+public class Body {}

@@ -16,26 +16,23 @@
  */
 package nl.tjonahen;
 
-import nl.tjonahen.tracing.logging.LoggingAdaptee;
 import nl.tjonahen.tracing.Target;
+import nl.tjonahen.tracing.logging.LoggingAdaptee;
 
 public class Client {
 
-	/**
-	 * @param args -
-	 */
-	public static void main(String[] args) {
-		Target tracer = new LoggingAdaptee();
+  /** @param args - */
+  public static void main(String[] args) {
+    Target tracer = new LoggingAdaptee();
 
+    tracer.trace("Start application.");
 
-		tracer.trace("Start application.");
+    // Some processing
 
-// Some processing
+    tracer.trace("Running that important business function.");
 
-		tracer.trace("Running that important business function.");
+    // Some more processing
 
-// Some more processing
-
-		tracer.trace("Stop application.");
-	}
+    tracer.trace("Stop application.");
+  }
 }

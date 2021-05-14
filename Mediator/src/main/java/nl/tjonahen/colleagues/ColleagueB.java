@@ -20,14 +20,14 @@ import nl.tjonahen.mediator.Mediator;
 
 public class ColleagueB {
 
-    private Mediator mediator;
+  private Mediator mediator;
 
-    public ColleagueB(Mediator mediator) {
-        this.mediator = mediator;
-    }
+  public ColleagueB(Mediator mediator) {
+    this.mediator = mediator;
+  }
 
-    public void perform() {
-        System.out.println("Perform B en inform mediator");
-        mediator.performAMethod();
-    }
+  public void perform() {
+    System.out.println("Perform B en inform mediator");
+    mediator.performAMethod();
+  }
 }

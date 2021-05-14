@@ -27,19 +27,18 @@ import nl.tjonahen.subsystem.SubSystemC;
  */
 public class SubSystemFacade {
 
-    public void performSubSystemServices() {
+  public void performSubSystemServices() {
 
-        final SubSystemA a = new SubSystemA();
+    final SubSystemA a = new SubSystemA();
 
-        final SubSystemB b = new SubSystemB();
+    final SubSystemB b = new SubSystemB();
 
-        final SubSystemC c = new SubSystemC();
+    final SubSystemC c = new SubSystemC();
 
+    final String result = a.performService();
 
-        final String result = a.performService();
+    final Double dResult = b.performService(result);
 
-        final Double dResult = b.performService(result);
-
-        c.performService(result, dResult);
-    }
+    c.performService(result, dResult);
+  }
 }

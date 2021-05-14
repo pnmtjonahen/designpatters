@@ -21,15 +21,14 @@ import java.io.InputStream;
 import nl.tjonahen.javacompiler.Compiler;
 import org.junit.jupiter.api.Test;
 
-
 public class JavaCompilerTest {
 
-    @Test
-    public void testMyJavaCompiler() {
-        Compiler c = new Compiler();
-        InputStream in = new ByteArrayInputStream("class Test { private int a; public Test() {} }".getBytes());
+  @Test
+  public void testMyJavaCompiler() {
+    Compiler c = new Compiler();
+    InputStream in =
+        new ByteArrayInputStream("class Test { private int a; public Test() {} }".getBytes());
 
-        c.compile(in, System.out);
-
-    }
+    c.compile(in, System.out);
+  }
 }

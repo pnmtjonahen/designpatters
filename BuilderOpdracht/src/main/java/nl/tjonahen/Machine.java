@@ -18,11 +18,11 @@ package nl.tjonahen;
 
 public interface Machine {
 
-    void buildFrame();
+  void buildFrame();
 
-    void buildWheels();
+  void buildWheels();
 
-    void buildEngine();
+  void buildEngine();
 
-    void buildBody();
+  void buildBody();
 }

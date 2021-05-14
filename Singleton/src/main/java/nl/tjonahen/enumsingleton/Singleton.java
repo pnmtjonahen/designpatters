@@ -17,15 +17,15 @@
 package nl.tjonahen.enumsingleton;
 
 /**
- * Enum as a singleton. Problem with it is that the resource the singleton is managing, is constructed at load time instead the moment it is used.
- * 
+ * Enum as a singleton. Problem with it is that the resource the singleton is managing, is
+ * constructed at load time instead the moment it is used.
+ *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public enum Singleton {
+  INSTANCE;
 
-    INSTANCE;
-
-    public void theBusinessMethod() {
-        System.out.println("processing some data....");
-    }
+  public void theBusinessMethod() {
+    System.out.println("processing some data....");
+  }
 }

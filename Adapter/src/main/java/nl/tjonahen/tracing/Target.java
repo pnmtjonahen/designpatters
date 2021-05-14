@@ -18,15 +18,11 @@ package nl.tjonahen.tracing;
 
 /**
  * Defines the target interface
- * 
+ *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public interface Target {
 
-        /**
-         * 
-         * @param traceMessage - 
-         */
-	void trace(String traceMessage);
-
+  /** @param traceMessage - */
+  void trace(String traceMessage);
 }

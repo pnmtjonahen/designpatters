@@ -21,33 +21,31 @@ import java.util.Map;
 
 public class Verdieping {
 
-    private final Map<Integer, Kamer> kamers;
-    private Trap omhoog;
-    private Trap omlaag;
+  private final Map<Integer, Kamer> kamers;
+  private Trap omhoog;
+  private Trap omlaag;
 
-    public Verdieping() {
-        this.kamers = new HashMap<>();
-    }
+  public Verdieping() {
+    this.kamers = new HashMap<>();
+  }
 
-    public Map<Integer, Kamer> getKamers() {
-        return kamers;
-    }
+  public Map<Integer, Kamer> getKamers() {
+    return kamers;
+  }
 
-    public void setTrapOmhoog(Trap trap) {
-        omhoog = trap;
+  public void setTrapOmhoog(Trap trap) {
+    omhoog = trap;
+  }
 
-    }
+  public void setTrapOmlaag(Trap trap) {
+    omlaag = trap;
+  }
 
-    public void setTrapOmlaag(Trap trap) {
-        omlaag = trap;
+  public Trap getOmhoog() {
+    return omhoog;
+  }
 
-    }
-
-    public Trap getOmhoog() {
-        return omhoog;
-    }
-
-    public Trap getOmlaag() {
-        return omlaag;
-    }
+  public Trap getOmlaag() {
+    return omlaag;
+  }
 }

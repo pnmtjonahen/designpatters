@@ -21,20 +21,19 @@ import nl.tjonahen.template.PreProcess;
 import nl.tjonahen.template.ProcessTemplate;
 import org.junit.jupiter.api.Test;
 
-
 public class TemplateTest {
 
-    @Test
-    public void testConcreteTemplate() {
-        ProcessTemplate pt = new ConcreteProcess();
+  @Test
+  public void testConcreteTemplate() {
+    ProcessTemplate pt = new ConcreteProcess();
 
-        pt.templateMethod();
-    }
+    pt.templateMethod();
+  }
 
-    @Test
-    public void testenPreProcess() {
-        ProcessTemplate pt = new PreProcess();
+  @Test
+  public void testenPreProcess() {
+    ProcessTemplate pt = new PreProcess();
 
-        pt.templateMethod();
-    }
+    pt.templateMethod();
+  }
 }

@@ -21,7 +21,7 @@ import nl.tjonahen.base.Document;
 
 public class ScribleDocument extends Document {
 
-    public ScribleDocument(final Application app) {
-        super(app);
-    }
+  public ScribleDocument(final Application app) {
+    super(app);
+  }
 }

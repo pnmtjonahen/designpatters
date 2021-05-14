@@ -20,19 +20,16 @@ import nl.tjonahen.base.Application;
 import nl.tjonahen.base.Document;
 import nl.tjonahen.base.View;
 
-/**
- * Factory method implementatie voor een scrible applicatie.
- *
- */
+/** Factory method implementatie voor een scrible applicatie. */
 public class ScribleApplication extends Application {
 
-    @Override
-    public Document createDocument(final Application app) {
-        return new ScribleDocument(app);
-    }
+  @Override
+  public Document createDocument(final Application app) {
+    return new ScribleDocument(app);
+  }
 
-    @Override
-    public View createView(final Application app, final Document doc) {
-        return new ScribleView(app, doc);
-    }
+  @Override
+  public View createView(final Application app, final Document doc) {
+    return new ScribleView(app, doc);
+  }
 }

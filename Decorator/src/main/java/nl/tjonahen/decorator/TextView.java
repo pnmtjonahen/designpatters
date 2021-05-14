@@ -18,8 +18,8 @@ package nl.tjonahen.decorator;
 
 public class TextView implements VisualComponent {
 
-    @Override
-    public void draw() {
-        System.out.println(getClass().getName() + "->draw");
-    }
+  @Override
+  public void draw() {
+    System.out.println(getClass().getName() + "->draw");
+  }
 }

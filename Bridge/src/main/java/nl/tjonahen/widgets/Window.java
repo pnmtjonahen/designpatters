@@ -18,5 +18,5 @@ package nl.tjonahen.widgets;
 
 public interface Window {
 
-    void draw();
+  void draw();
 }

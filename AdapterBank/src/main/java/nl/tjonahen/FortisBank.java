@@ -18,8 +18,7 @@ package nl.tjonahen;
 
 public class FortisBank {
 
-    public void bepaalSaldoVanRekening(final Rekening rek, final Saldo s) {
-        s.setSaldo(new Long(0));
-
-    }
+  public void bepaalSaldoVanRekening(final Rekening rek, final Saldo s) {
+    s.setSaldo(new Long(0));
+  }
 }

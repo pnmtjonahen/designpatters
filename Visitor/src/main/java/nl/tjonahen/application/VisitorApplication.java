@@ -24,25 +24,24 @@ import nl.tjonahen.composite.Tree;
 
 public class VisitorApplication {
 
-    public static void main(String[] args) {
-        Tree t = buildTree();
-        Visitor v = null;
-        t.accept(v);
-    }
+  public static void main(String[] args) {
+    Tree t = buildTree();
+    Visitor v = null;
+    t.accept(v);
+  }
 
-    private static Tree buildTree() {
-        Tree t = new Tree();
-        Branch b = new Branch();
-        b.getFlowers().add(new Flower());
+  private static Tree buildTree() {
+    Tree t = new Tree();
+    Branch b = new Branch();
+    b.getFlowers().add(new Flower());
 
-        t.getBranches().add(b);
+    t.getBranches().add(b);
 
-        b = new Branch();
-        b.getFlowers().add(new Flower());
-        b.getLeafs().add(new Leaf());
-        t.getBranches().add(b);
+    b = new Branch();
+    b.getFlowers().add(new Flower());
+    b.getLeafs().add(new Leaf());
+    t.getBranches().add(b);
 
-
-        return t;
-    }
+    return t;
+  }
 }

@@ -21,5 +21,4 @@ package nl.tjonahen.widgets;
  *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
-public interface ScrollBar {
-}
+public interface ScrollBar {}

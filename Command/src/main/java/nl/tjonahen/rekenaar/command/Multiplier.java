@@ -25,13 +25,13 @@ import java.util.Stack;
  */
 public class Multiplier implements Command {
 
-    /**
-     * Multiplies two elements from the stack and pushes the result back on it.
-     *
-     * @param stack -
-     */
-    @Override
-    public void execute(final Stack<Double> stack) {
-        stack.push(stack.pop() * stack.pop());
-    }
+  /**
+   * Multiplies two elements from the stack and pushes the result back on it.
+   *
+   * @param stack -
+   */
+  @Override
+  public void execute(final Stack<Double> stack) {
+    stack.push(stack.pop() * stack.pop());
+  }
 }

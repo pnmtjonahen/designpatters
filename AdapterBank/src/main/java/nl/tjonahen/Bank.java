@@ -18,5 +18,5 @@ package nl.tjonahen;
 
 public interface Bank {
 
-    long saldo(String rekeningNummer);
+  long saldo(String rekeningNummer);
 }

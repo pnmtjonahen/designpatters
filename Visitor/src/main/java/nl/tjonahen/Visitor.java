@@ -23,11 +23,11 @@ import nl.tjonahen.composite.Tree;
 
 public interface Visitor {
 
-    void visit(Leaf leaf);
+  void visit(Leaf leaf);
 
-    void visit(Branch branch);
+  void visit(Branch branch);
 
-    void visit(Flower flower);
+  void visit(Flower flower);
 
-    void visit(Tree tree);
+  void visit(Tree tree);
 }

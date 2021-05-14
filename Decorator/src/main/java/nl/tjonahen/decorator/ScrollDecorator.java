@@ -18,17 +18,17 @@ package nl.tjonahen.decorator;
 
 public class ScrollDecorator extends Decorator {
 
-    @Override
-    public void draw() {
-        super.draw();
-        scrollDraw();
-    }
+  @Override
+  public void draw() {
+    super.draw();
+    scrollDraw();
+  }
 
-    private void scrollDraw() {
-        System.out.println(getClass().getName() + "->scrollDraw");
-    }
+  private void scrollDraw() {
+    System.out.println(getClass().getName() + "->scrollDraw");
+  }
 
-    public ScrollDecorator(final VisualComponent next) {
-        super(next);
-    }
+  public ScrollDecorator(final VisualComponent next) {
+    super(next);
+  }
 }

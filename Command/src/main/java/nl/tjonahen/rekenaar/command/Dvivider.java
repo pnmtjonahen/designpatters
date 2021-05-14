@@ -20,19 +20,18 @@ import java.util.Stack;
 
 /**
  * divider.
- * 
+ *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public class Dvivider implements Command {
 
-    /**
-     * Divides two elements from the stack and pushes the result back on it.
-     *
-     * @param stack -
-     */
-    @Override
-    public void execute(final Stack<Double> stack) {
-        stack.push(stack.pop() / stack.pop());
-
-    }
+  /**
+   * Divides two elements from the stack and pushes the result back on it.
+   *
+   * @param stack -
+   */
+  @Override
+  public void execute(final Stack<Double> stack) {
+    stack.push(stack.pop() / stack.pop());
+  }
 }

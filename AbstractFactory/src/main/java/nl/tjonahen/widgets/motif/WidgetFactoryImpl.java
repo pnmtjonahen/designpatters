@@ -22,15 +22,14 @@ import nl.tjonahen.widgets.Window;
 
 public class WidgetFactoryImpl implements WidgetFactory {
 
-        @Override
-	public ScrollBar createScrollBar() {
-            System.out.println("motif");
-		return new ScrollBarImpl();
-	}
+  @Override
+  public ScrollBar createScrollBar() {
+    System.out.println("motif");
+    return new ScrollBarImpl();
+  }
 
-        @Override
-	public Window createWindow() {
-		return new WindowImpl();
-	}
-
+  @Override
+  public Window createWindow() {
+    return new WindowImpl();
+  }
 }

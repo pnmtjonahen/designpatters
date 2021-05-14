@@ -18,14 +18,14 @@ package nl.tjonahen.memento;
 
 public class State {
 
-    // the attribute holding the state
-    private int attrib;
+  // the attribute holding the state
+  private int attrib;
 
-    public State(final Originator originator) {
-        attrib = originator.getAttrib();
-    }
+  public State(final Originator originator) {
+    attrib = originator.getAttrib();
+  }
 
-    public void update(final Originator originator) {
-        originator.setAttrib(attrib);
-    }
+  public void update(final Originator originator) {
+    originator.setAttrib(attrib);
+  }
 }

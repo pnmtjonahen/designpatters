@@ -18,13 +18,11 @@ package nl.tjonahen.widgets;
 
 /**
  * Simply a sample class, one of the related classes the factory produces.
+ *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public interface ScrollBar {
 
-    /**
-     * Draw the scroll bar.
-     */
-    void draw();
-
+  /** Draw the scroll bar. */
+  void draw();
 }

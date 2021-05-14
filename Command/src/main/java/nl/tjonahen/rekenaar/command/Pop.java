@@ -24,15 +24,14 @@ import java.util.Stack;
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public class Pop implements Command {
-    private Double value;
-    @Override
-    public void execute(final Stack<Double> stack) {
-        value = stack.pop();
-    }
+  private Double value;
 
-    public Double getValue() {
-        return value;
-    }
-    
-    
+  @Override
+  public void execute(final Stack<Double> stack) {
+    value = stack.pop();
+  }
+
+  public Double getValue() {
+    return value;
+  }
 }

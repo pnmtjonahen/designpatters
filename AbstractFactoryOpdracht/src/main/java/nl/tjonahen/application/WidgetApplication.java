@@ -20,44 +20,38 @@ import nl.tjonahen.widgets.ScrollBar;
 import nl.tjonahen.widgets.WidgetFactory;
 import nl.tjonahen.widgets.Window;
 
-/**
- * Application that uses a AbstractFactory to create widgets.
- *
- *
- */
+/** Application that uses a AbstractFactory to create widgets. */
 public class WidgetApplication {
 
-    public static void main(String[] args) {
-        final WidgetFactory widgetFactory = determineWidgetFactory(args);
-        final WidgetApplication widgetApplication = new WidgetApplication(widgetFactory);
-        widgetApplication.startApplication();
+  public static void main(String[] args) {
+    final WidgetFactory widgetFactory = determineWidgetFactory(args);
+    final WidgetApplication widgetApplication = new WidgetApplication(widgetFactory);
+    widgetApplication.startApplication();
+  }
 
-    }
-    private final WidgetFactory widgetFactory;
+  private final WidgetFactory widgetFactory;
 
-    /**
-     * Constructor.
-     *
-     * @param widgetFactory -
-     */
-    WidgetApplication(final WidgetFactory widgetFactory) {
-        this.widgetFactory = widgetFactory;
-    }
+  /**
+   * Constructor.
+   *
+   * @param widgetFactory -
+   */
+  WidgetApplication(final WidgetFactory widgetFactory) {
+    this.widgetFactory = widgetFactory;
+  }
 
-    /**
-     * simulate the start of an application.
-     */
-    void startApplication() {
+  /** simulate the start of an application. */
+  void startApplication() {
 
-        final Window window = widgetFactory.createWindow();
-        window.draw();
+    final Window window = widgetFactory.createWindow();
+    window.draw();
 
-        final ScrollBar scrollBar = widgetFactory.createScrollBar();
-        scrollBar.draw();
-    }
+    final ScrollBar scrollBar = widgetFactory.createScrollBar();
+    scrollBar.draw();
+  }
 
-    private static WidgetFactory determineWidgetFactory(String[] args) {
-        // TODO: Implement construction of the correct WidgetFactory.
-        return null;
-    }
+  private static WidgetFactory determineWidgetFactory(String[] args) {
+    // TODO: Implement construction of the correct WidgetFactory.
+    return null;
+  }
 }

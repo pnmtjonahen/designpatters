@@ -16,16 +16,15 @@
  */
 package nl.tjonahen.objectcompiler;
 
-abstract public class ProgramNode {
+public abstract class ProgramNode {
 
-    protected ProgramNode() {
-    }
+  protected ProgramNode() {}
 
-    abstract public void getSourcePosition(int line, int index);
+  public abstract void getSourcePosition(int line, int index);
 
-    abstract public void add(ProgramNode node);
+  public abstract void add(ProgramNode node);
 
-    abstract public void remove(ProgramNode node);
+  public abstract void remove(ProgramNode node);
 
-    abstract public void traverse(CodeGenerator codeGenerator);
+  public abstract void traverse(CodeGenerator codeGenerator);
 }

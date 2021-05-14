@@ -13,7 +13,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */package nl.tjonahen.builders;
+ */ package nl.tjonahen.builders;
 
 import nl.tjonahen.GebouwenBuilder;
 import nl.tjonahen.flat.FlatGebouw;
@@ -23,28 +23,33 @@ import nl.tjonahen.flat.Verdieping;
 
 public class FlatBuilder extends GebouwenBuilder {
 
-    @Override
-    public void buildGebouw() {
-        gebouw = new FlatGebouw();
-        buildVerdieping(0); // begane grond
-    }
+  @Override
+  public void buildGebouw() {
+    gebouw = new FlatGebouw();
+    buildVerdieping(0); // begane grond
+  }
 
-    @Override
-    public void buildKamer(int opVerdieping, int kamer) {
-        ((FlatGebouw) gebouw).getVerdiepingen().get(new Integer(opVerdieping)).getKamers().put(new Integer(kamer), new Kamer());
-    }
+  @Override
+  public void buildKamer(int opVerdieping, int kamer) {
+    ((FlatGebouw) gebouw)
+        .getVerdiepingen()
+        .get(new Integer(opVerdieping))
+        .getKamers()
+        .put(new Integer(kamer), new Kamer());
+  }
 
-    @Override
-    public void buildTrap(int vanVerdieping, int naarVerdieping) {
-        Verdieping onder = ((FlatGebouw) gebouw).getVerdiepingen().get(new Integer(vanVerdieping));
-        Verdieping boven = ((FlatGebouw) gebouw).getVerdiepingen().get(new Integer(naarVerdieping));
-        Trap trap = new Trap(onder, boven);
-        onder.setTrapOmhoog(trap);
-        boven.setTrapOmlaag(trap);
-        ((FlatGebouw) gebouw).getTrappenhuis().add(trap);
-    }
-    @Override
-    public void buildVerdieping(int verdieping) {
-        ((FlatGebouw) gebouw).getVerdiepingen().put(new Integer(verdieping), new Verdieping());
-    }
+  @Override
+  public void buildTrap(int vanVerdieping, int naarVerdieping) {
+    Verdieping onder = ((FlatGebouw) gebouw).getVerdiepingen().get(new Integer(vanVerdieping));
+    Verdieping boven = ((FlatGebouw) gebouw).getVerdiepingen().get(new Integer(naarVerdieping));
+    Trap trap = new Trap(onder, boven);
+    onder.setTrapOmhoog(trap);
+    boven.setTrapOmlaag(trap);
+    ((FlatGebouw) gebouw).getTrappenhuis().add(trap);
+  }
+
+  @Override
+  public void buildVerdieping(int verdieping) {
+    ((FlatGebouw) gebouw).getVerdiepingen().put(new Integer(verdieping), new Verdieping());
+  }
 }

@@ -18,15 +18,15 @@ package nl.tjonahen;
 
 public class FortisBankAdapter implements Bank {
 
-    @Override
-    public long saldo(final String rekeningNummer) {
-        FortisBank bank = new FortisBank();
-        Rekening rek = new Rekening();
-        rek.setRekening(rekeningNummer);
-        Saldo s = new Saldo();
+  @Override
+  public long saldo(final String rekeningNummer) {
+    FortisBank bank = new FortisBank();
+    Rekening rek = new Rekening();
+    rek.setRekening(rekeningNummer);
+    Saldo s = new Saldo();
 
-        bank.bepaalSaldoVanRekening(rek, s);
+    bank.bepaalSaldoVanRekening(rek, s);
 
-        return s.getSaldo().longValue();
-    }
+    return s.getSaldo().longValue();
+  }
 }

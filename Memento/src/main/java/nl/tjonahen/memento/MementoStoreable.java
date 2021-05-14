@@ -16,5 +16,4 @@
  */
 package nl.tjonahen.memento;
 
-public interface MementoStoreable {
-}
+public interface MementoStoreable {}

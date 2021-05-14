@@ -16,5 +16,4 @@
  */
 package nl.tjonahen.flat;
 
-public class Kamer {
-}
+public class Kamer {}

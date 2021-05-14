@@ -21,19 +21,19 @@ import java.util.List;
 
 public class SpeelVeld {
 
-    private List<Key> keys = new ArrayList<>();
+  private List<Key> keys = new ArrayList<>();
 
-    public SpeelVeld add(Key newKey) {
-        keys.add(newKey);
-        return this;
-    }
+  public SpeelVeld add(Key newKey) {
+    keys.add(newKey);
+    return this;
+  }
 
-    @Override
-    public String toString() {
-        String str = "";
-        for (Key key : keys) {
-            str = str + key.toString();
-        }
-        return str;
+  @Override
+  public String toString() {
+    String str = "";
+    for (Key key : keys) {
+      str = str + key.toString();
     }
+    return str;
+  }
 }

@@ -18,26 +18,24 @@ package nl.tjonahen.composite;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import nl.tjonahen.Visitor;
 
 public class Tree {
 
-    List<Branch> branches = new ArrayList<>();
+  List<Branch> branches = new ArrayList<>();
 
-    public List<Branch> getBranches() {
-        return branches;
+  public List<Branch> getBranches() {
+    return branches;
+  }
+
+  public void setBranches(final List<Branch> branches) {
+    this.branches = branches;
+  }
+
+  public void accept(final Visitor v) {
+    v.visit(this);
+    for (Branch b : branches) {
+      b.accept(v);
     }
-
-    public void setBranches(final List<Branch> branches) {
-        this.branches = branches;
-    }
-
-    public void accept(final Visitor v) {
-        v.visit(this);
-        for (Branch b : branches) {
-            b.accept(v);
-        }
-
-    }
+  }
 }

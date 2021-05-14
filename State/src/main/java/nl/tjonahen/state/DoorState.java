@@ -20,7 +20,7 @@ import nl.tjonahen.Door;
 
 public interface DoorState {
 
-    void click(Door door);
+  void click(Door door);
 
-    void complete(Door door);
+  void complete(Door door);
 }

@@ -18,18 +18,18 @@ package nl.tjonahen.doublecheckedlocking;
 
 public class Singleton {
 
-    private Singleton() {
-    }
-    private static Singleton _instance = null;
+  private Singleton() {}
 
-    public static synchronized Singleton instance() {
-        if (_instance == null) {
-            _instance = new Singleton();
-        }
-        return _instance;
-    }
+  private static Singleton _instance = null;
 
-    public void theBusinessMethod() {
-        System.out.println("processing some data....");
+  public static synchronized Singleton instance() {
+    if (_instance == null) {
+      _instance = new Singleton();
     }
+    return _instance;
+  }
+
+  public void theBusinessMethod() {
+    System.out.println("processing some data....");
+  }
 }

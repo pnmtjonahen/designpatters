@@ -20,29 +20,29 @@ import nl.tjonahen.Machine;
 
 public class CarBuilder implements Machine {
 
-    private Car car;
+  private Car car;
 
-    @Override
-    public void buildBody() {
-        // TODO Auto-generated method stub
-    }
+  @Override
+  public void buildBody() {
+    // TODO Auto-generated method stub
+  }
 
-    @Override
-    public void buildEngine() {
-        // TODO Auto-generated method stub
-    }
+  @Override
+  public void buildEngine() {
+    // TODO Auto-generated method stub
+  }
 
-    @Override
-    public void buildFrame() {
-        // TODO Auto-generated method stub
-    }
+  @Override
+  public void buildFrame() {
+    // TODO Auto-generated method stub
+  }
 
-    @Override
-    public void buildWheels() {
-        // TODO Auto-generated method stub
-    }
+  @Override
+  public void buildWheels() {
+    // TODO Auto-generated method stub
+  }
 
-    public Car getCar() {
-        return car;
-    }
+  public Car getCar() {
+    return car;
+  }
 }

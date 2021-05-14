@@ -20,16 +20,14 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import org.junit.jupiter.api.Test;
 
-
-
 public class CompilerTest {
 
-    @Test
-    public void testCompiler() {
-        Compiler c = new Compiler();
+  @Test
+  public void testCompiler() {
+    Compiler c = new Compiler();
 
-        InputStream in = new ByteArrayInputStream("begin print ditte".getBytes());
+    InputStream in = new ByteArrayInputStream("begin print ditte".getBytes());
 
-        c.compile(in, System.out);
-    }
+    c.compile(in, System.out);
+  }
 }

@@ -21,24 +21,24 @@ import nl.tjonahen.subsystem.SubSystemB;
 import nl.tjonahen.subsystem.SubSystemC;
 
 /**
- * This is the chatty client. The client calls all 3 subsystems. Passing back and forward results and input.
- * 
+ * This is the chatty client. The client calls all 3 subsystems. Passing back and forward results
+ * and input.
+ *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
 public class ChattyClient {
 
-    public static void main(String[] args) {
-        final SubSystemA a = new SubSystemA();
+  public static void main(String[] args) {
+    final SubSystemA a = new SubSystemA();
 
-        final SubSystemB b = new SubSystemB();
+    final SubSystemB b = new SubSystemB();
 
-        final SubSystemC c = new SubSystemC();
+    final SubSystemC c = new SubSystemC();
 
+    final String result = a.performService();
 
-        final String result = a.performService();
+    final Double dResult = b.performService(result);
 
-        final Double dResult = b.performService(result);
-
-        c.performService(result, dResult);
-    }
+    c.performService(result, dResult);
+  }
 }

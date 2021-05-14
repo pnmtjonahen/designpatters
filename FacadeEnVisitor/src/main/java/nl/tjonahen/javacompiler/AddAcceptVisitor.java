@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2002 Sun Microsystems, Inc., 4150 Network Circle, Santa Clara,
  * California 95054, U.S.A. All rights reserved.  Sun Microsystems, Inc. has
@@ -21,33 +20,27 @@
  * and specially designated nationals lists is strictly prohibited.
  */
 
-
 package nl.tjonahen.javacompiler;
 
 import java.io.PrintStream;
-
 import nl.tjonahen.javacompiler.parser.ASTClassBodyDeclaration;
 
-public class AddAcceptVisitor extends UnparseVisitor
-{
+public class AddAcceptVisitor extends UnparseVisitor {
 
-  public AddAcceptVisitor(PrintStream o)
-  {
+  public AddAcceptVisitor(PrintStream o) {
     super(o);
   }
 
   @Override
-  public Object visit(ASTClassBodyDeclaration node, Object data)
-  {
+  public Object visit(ASTClassBodyDeclaration node, Object data) {
     /* Are we the first child of our parent? */
     if (node == node.jjtGetParent().jjtGetChild(0)) {
 
-      /** Attempt to make the new code match the indentation of the
-          node. */
+      /** Attempt to make the new code match the indentation of the node. */
       StringBuffer pre = new StringBuffer("");
-//      for (int i = 1; i < node.getFirstToken().beginColumn; ++i) {
-//	pre.append(" ");
-//      }
+      //      for (int i = 1; i < node.getFirstToken().beginColumn; ++i) {
+      //	pre.append(" ");
+      //      }
 
       out.println(pre + "");
       out.println(pre + "/** Accept the visitor. **/");
@@ -57,5 +50,4 @@ public class AddAcceptVisitor extends UnparseVisitor
     }
     return super.visit(node, data);
   }
-
 }

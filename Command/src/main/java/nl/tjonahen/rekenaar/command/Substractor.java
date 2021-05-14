@@ -13,7 +13,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */package nl.tjonahen.rekenaar.command;
+ */ package nl.tjonahen.rekenaar.command;
 
 import java.util.Stack;
 
@@ -24,13 +24,13 @@ import java.util.Stack;
  */
 public class Substractor implements Command {
 
-    /**
-     * Substracts two elements from the stack and pushes the result back on it.
-     *
-     * @param stack -
-     */
-    @Override
-    public void execute(final Stack<Double> stack) {
-        stack.push(stack.pop() - stack.pop());
-    }
+  /**
+   * Substracts two elements from the stack and pushes the result back on it.
+   *
+   * @param stack -
+   */
+  @Override
+  public void execute(final Stack<Double> stack) {
+    stack.push(stack.pop() - stack.pop());
+  }
 }

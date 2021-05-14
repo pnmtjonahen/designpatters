@@ -18,6 +18,4 @@ package nl.tjonahen.widgets.motif;
 
 import nl.tjonahen.widgets.ScrollBar;
 
-public class ScrollBarImpl implements ScrollBar {
-
-}
+public class ScrollBarImpl implements ScrollBar {}

@@ -21,13 +21,14 @@ import nl.tjonahen.scrible.ScribleApplication;
 
 public class Main {
 
-    /**
-     * Create an application. Let subclasses implement the factory methods to create specific document and view classes.
-     * 
-     * @param args -
-     */
-    public static void main(String[] args) {
-        final Application app = new ScribleApplication();
-        app.start();
-    }
+  /**
+   * Create an application. Let subclasses implement the factory methods to create specific document
+   * and view classes.
+   *
+   * @param args -
+   */
+  public static void main(String[] args) {
+    final Application app = new ScribleApplication();
+    app.start();
+  }
 }

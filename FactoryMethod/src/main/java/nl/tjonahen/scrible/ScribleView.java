@@ -22,7 +22,7 @@ import nl.tjonahen.base.View;
 
 public class ScribleView extends View {
 
-    public ScribleView(final Application app, final Document doc) {
-        super(app, doc);
-    }
+  public ScribleView(final Application app, final Document doc) {
+    super(app, doc);
+  }
 }

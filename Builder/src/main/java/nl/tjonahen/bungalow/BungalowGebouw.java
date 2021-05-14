@@ -18,19 +18,17 @@ package nl.tjonahen.bungalow;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import nl.tjonahen.IGebouw;
 
 public class BungalowGebouw implements IGebouw {
 
-    private final List<Kamer> hal;
+  private final List<Kamer> hal;
 
-    public BungalowGebouw() {
-        this.hal = new ArrayList<>();
-    }
+  public BungalowGebouw() {
+    this.hal = new ArrayList<>();
+  }
 
-    
-    public void addKamer(Kamer kamer) {
-        hal.add(kamer);
-    }
+  public void addKamer(Kamer kamer) {
+    hal.add(kamer);
+  }
 }

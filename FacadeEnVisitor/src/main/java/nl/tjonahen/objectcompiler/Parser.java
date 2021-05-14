@@ -27,20 +27,19 @@ package nl.tjonahen.objectcompiler;
 
 public class Parser {
 
-    public void parse(Scanner scanner, ProgramNodeBuilder builder) {
+  public void parse(Scanner scanner, ProgramNodeBuilder builder) {
 
-        Token t = scanner.scan();
+    Token t = scanner.scan();
 
-        while (t != null) {
-            if ("begin".equals(t.value())) {
-                builder.newApplicationProgramNode();
-            }
-            if ("print".equals(t.value())) {
-                builder.newStatementProgramNode(t.value());
-            }
+    while (t != null) {
+      if ("begin".equals(t.value())) {
+        builder.newApplicationProgramNode();
+      }
+      if ("print".equals(t.value())) {
+        builder.newStatementProgramNode(t.value());
+      }
 
-            t = scanner.scan();
-        }
-
+      t = scanner.scan();
     }
+  }
 }

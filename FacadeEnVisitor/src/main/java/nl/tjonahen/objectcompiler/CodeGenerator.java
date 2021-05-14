@@ -18,17 +18,17 @@ package nl.tjonahen.objectcompiler;
 
 import java.io.PrintStream;
 
-abstract public class CodeGenerator {
+public abstract class CodeGenerator {
 
-    protected PrintStream os;
+  protected PrintStream os;
 
-    protected CodeGenerator(PrintStream os) {
-        this.os = os;
-    }
+  protected CodeGenerator(PrintStream os) {
+    this.os = os;
+  }
 
-    abstract public void visit(StatementProgramNode node);
+  public abstract void visit(StatementProgramNode node);
 
-    abstract public void visit(ProgramNode node);
+  public abstract void visit(ProgramNode node);
 
-    abstract public void visit(ExpressionNode node);
+  public abstract void visit(ExpressionNode node);
 }

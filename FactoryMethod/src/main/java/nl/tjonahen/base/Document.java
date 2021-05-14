@@ -18,11 +18,11 @@ package nl.tjonahen.base;
 
 public class Document {
 
-    private final Application parent;
+  private final Application parent;
 
-    public Document(final Application app) {
-        this.parent = app;
-    }
+  public Document(final Application app) {
+    this.parent = app;
+  }
 
-    //other document functionality
+  // other document functionality
 }

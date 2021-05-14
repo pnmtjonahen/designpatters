@@ -20,18 +20,18 @@ import org.junit.jupiter.api.Test;
 
 public class WindowTest {
 
-    @Test
-    public void runBridgeTest() {
-        WindowBridge w = new WindowBridge();
+  @Test
+  public void runBridgeTest() {
+    WindowBridge w = new WindowBridge();
 
-        w.draw();
+    w.draw();
 
-        w.setWidgetType(WidgetEnum.MOTIF);
+    w.setWidgetType(WidgetEnum.MOTIF);
 
-        w.draw();
+    w.draw();
 
-        w.setWidgetType(WidgetEnum.PM);
+    w.setWidgetType(WidgetEnum.PM);
 
-        w.draw();
-    }
+    w.draw();
+  }
 }

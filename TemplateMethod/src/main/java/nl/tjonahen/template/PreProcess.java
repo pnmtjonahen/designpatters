@@ -18,15 +18,13 @@ package nl.tjonahen.template;
 
 public class PreProcess extends ProcessTemplate {
 
-    @Override
-    protected void preProcess() {
-        System.out.println("preProcess");
+  @Override
+  protected void preProcess() {
+    System.out.println("preProcess");
+  }
 
-    }
-
-    @Override
-    protected void process() {
-        System.out.println("Preprocess mag ook iets doen");
-
-    }
+  @Override
+  protected void process() {
+    System.out.println("Preprocess mag ook iets doen");
+  }
 }

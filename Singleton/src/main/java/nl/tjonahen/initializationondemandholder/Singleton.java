@@ -18,20 +18,18 @@ package nl.tjonahen.initializationondemandholder;
 
 public class Singleton {
 
-    private Singleton() {
-    }
+  private Singleton() {}
 
-    private static class SingletonHolder {
+  private static class SingletonHolder {
 
-        static final Singleton _instance = new Singleton();
-    }
+    static final Singleton _instance = new Singleton();
+  }
 
-    public static Singleton instance() {
-        return SingletonHolder._instance;
-    }
-    
-    
-    public void theBusinessMethod() {
-        System.out.println("processing some data....");
-    }
+  public static Singleton instance() {
+    return SingletonHolder._instance;
+  }
+
+  public void theBusinessMethod() {
+    System.out.println("processing some data....");
+  }
 }

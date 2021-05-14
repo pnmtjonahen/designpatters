@@ -18,11 +18,11 @@ package nl.tjonahen;
 
 public class FIRABank implements Bank {
 
-    /* (non-Javadoc)
-     * @see nl.tjonahen.IBank#saldo(java.lang.String)
-     */
-    @Override
-    public long saldo(String rekeningNummer) {
-        return 0;
-    }
+  /* (non-Javadoc)
+   * @see nl.tjonahen.IBank#saldo(java.lang.String)
+   */
+  @Override
+  public long saldo(String rekeningNummer) {
+    return 0;
+  }
 }

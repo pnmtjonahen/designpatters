@@ -20,25 +20,25 @@ import nl.tjonahen.state.DoorState;
 
 public class Door {
 
-    public DoorState state = null;
+  public DoorState state = null;
 
-    public Door(final DoorState initial) {
-        state = initial;
-    }
+  public Door(final DoorState initial) {
+    state = initial;
+  }
 
-    public void setDoorState(final DoorState newState) {
-        state = newState;
-    }
+  public void setDoorState(final DoorState newState) {
+    state = newState;
+  }
 
-    public void click() {
-        state.click(this);
-    }
+  public void click() {
+    state.click(this);
+  }
 
-    public void complete() {
-        state.complete(this);
-    }
+  public void complete() {
+    state.complete(this);
+  }
 
-    public String getCurrentPosition() {
-        return state.toString();
-    }
+  public String getCurrentPosition() {
+    return state.toString();
+  }
 }

@@ -16,26 +16,22 @@
  */
 package nl.tjonahen.template;
 
-abstract public class ProcessTemplate {
+public abstract class ProcessTemplate {
 
-    /**
-     * Define a process and let subclasses redefine certain steps.
-     */
-    public void templateMethod() {
-        System.out.println("iets");
-        preProcess();
-        System.out.println("nog iets");
-        process();
-        System.out.println("en nog meer");
-        postProcess();
-        System.out.println("en als laatste nog iets");
-    }
+  /** Define a process and let subclasses redefine certain steps. */
+  public void templateMethod() {
+    System.out.println("iets");
+    preProcess();
+    System.out.println("nog iets");
+    process();
+    System.out.println("en nog meer");
+    postProcess();
+    System.out.println("en als laatste nog iets");
+  }
 
-    protected void preProcess() {
-    }
+  protected void preProcess() {}
 
-    abstract protected void process();
+  protected abstract void process();
 
-    protected void postProcess() {
-    }
+  protected void postProcess() {}
 }

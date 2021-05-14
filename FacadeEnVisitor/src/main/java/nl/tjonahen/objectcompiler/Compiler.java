@@ -21,18 +21,17 @@ import java.io.PrintStream;
 
 public class Compiler {
 
-    public void compile(InputStream is, PrintStream os) {
-        Scanner scanner = new Scanner(is);
+  public void compile(InputStream is, PrintStream os) {
+    Scanner scanner = new Scanner(is);
 
-        ProgramNodeBuilder builder = new ProgramNodeBuilder();
+    ProgramNodeBuilder builder = new ProgramNodeBuilder();
 
-        Parser parser = new Parser();
-        parser.parse(scanner, builder);
+    Parser parser = new Parser();
+    parser.parse(scanner, builder);
 
-        MyCodeGenerator generator = new MyCodeGenerator(os);
-        ProgramNode tree = builder.getRootNode();
+    MyCodeGenerator generator = new MyCodeGenerator(os);
+    ProgramNode tree = builder.getRootNode();
 
-        tree.traverse(generator);
-
-    }
+    tree.traverse(generator);
+  }
 }

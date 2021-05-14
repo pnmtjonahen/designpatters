@@ -18,13 +18,13 @@ package nl.tjonahen.memento;
 
 public class Memento implements MementoStoreable {
 
-    private final State state;
+  private final State state;
 
-    public Memento(final State state) {
-        this.state = state;
-    }
+  public Memento(final State state) {
+    this.state = state;
+  }
 
-    public State getState() {
-        return state;
-    }
+  public State getState() {
+    return state;
+  }
 }

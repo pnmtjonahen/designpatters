@@ -22,18 +22,19 @@ import java.io.InputStreamReader;
 
 public class Decorator {
 
-    public static void main(String[] args) throws IOException {
-        Decorator dec = new Decorator();
-        dec.kennyFilteredInput();
-    }
-    public void kennyFilteredInput() throws IOException {
+  public static void main(String[] args) throws IOException {
+    Decorator dec = new Decorator();
+    dec.kennyFilteredInput();
+  }
 
-        final BufferedReader in = new BufferedReader(new InputStreamReader(new SouthparkFilter(System.in)));
-        String line = in.readLine();
-        while (!"".equals(line)) {
-            System.out.println(line);
-            line = in.readLine();
-        }
+  public void kennyFilteredInput() throws IOException {
 
+    final BufferedReader in =
+        new BufferedReader(new InputStreamReader(new SouthparkFilter(System.in)));
+    String line = in.readLine();
+    while (!"".equals(line)) {
+      System.out.println(line);
+      line = in.readLine();
     }
+  }
 }

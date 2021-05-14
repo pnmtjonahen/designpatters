@@ -21,16 +21,16 @@ import java.util.List;
 
 public class IteratorSample {
 
-    public void access(final List<E> list) {
-        Iterator<E> it = list.iterator();
+  public void access(final List<E> list) {
+    Iterator<E> it = list.iterator();
 
-        while (it.hasNext()) {
-            E e = it.next();
-            doeIetsMetE(e);
-        }
+    while (it.hasNext()) {
+      E e = it.next();
+      doeIetsMetE(e);
     }
+  }
 
-    private void doeIetsMetE(E e) {
-        // TODO Auto-generated method stub
-    }
+  private void doeIetsMetE(E e) {
+    // TODO Auto-generated method stub
+  }
 }

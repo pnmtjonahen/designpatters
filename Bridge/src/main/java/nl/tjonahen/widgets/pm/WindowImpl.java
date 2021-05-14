@@ -20,9 +20,8 @@ import nl.tjonahen.widgets.Window;
 
 public class WindowImpl implements Window {
 
-    @Override
-    public void draw() {
-        System.out.println("Drawing the PresentationManager way");
-
-    }
+  @Override
+  public void draw() {
+    System.out.println("Drawing the PresentationManager way");
+  }
 }

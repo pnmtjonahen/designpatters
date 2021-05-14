@@ -24,13 +24,15 @@ import org.junit.jupiter.api.Test;
 
 public class HandlerTest {
 
-    @Test
-    public void testChain() {
-        // setup de chain
-        final Handler h = new Handler(new NumberHandler(new Handler(new AlphaHandler(new Handler(new NullHandler(null))))));
-        
-        h.handle("Dit is een string");
-        h.handle("#nummer");
-        h.handle("@alpha");
-    }
+  @Test
+  public void testChain() {
+    // setup de chain
+    final Handler h =
+        new Handler(
+            new NumberHandler(new Handler(new AlphaHandler(new Handler(new NullHandler(null))))));
+
+    h.handle("Dit is een string");
+    h.handle("#nummer");
+    h.handle("@alpha");
+  }
 }

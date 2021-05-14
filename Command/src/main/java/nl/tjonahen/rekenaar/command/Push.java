@@ -25,14 +25,14 @@ import java.util.Stack;
  */
 public class Push implements Command {
 
-    private final Double value;
+  private final Double value;
 
-    public Push(final Double value) {
-        this.value = value;
-    }
+  public Push(final Double value) {
+    this.value = value;
+  }
 
-    @Override
-    public void execute(final Stack<Double> stack) {
-        stack.push(value);
-    }
+  @Override
+  public void execute(final Stack<Double> stack) {
+    stack.push(value);
+  }
 }

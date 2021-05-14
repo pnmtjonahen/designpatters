@@ -18,8 +18,8 @@ package nl.tjonahen.strategy;
 
 public class SystemErrStrategy implements Strategy {
 
-    @Override
-    public void out(final String input) {
-        System.err.println(input);
-    }
+  @Override
+  public void out(final String input) {
+    System.err.println(input);
+  }
 }

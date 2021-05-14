@@ -18,6 +18,4 @@ package nl.tjonahen.widgets.pm;
 
 import nl.tjonahen.widgets.Window;
 
-public class WindowImpl implements Window {
-
-}
+public class WindowImpl implements Window {}

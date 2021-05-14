@@ -20,17 +20,17 @@ import nl.tjonahen.mediator.Mediator;
 
 public class ColleagueA {
 
-    private Mediator mediator;
+  private Mediator mediator;
 
-    public ColleagueA(final Mediator mediator) {
-        this.mediator = mediator;
-    }
+  public ColleagueA(final Mediator mediator) {
+    this.mediator = mediator;
+  }
 
-    public void perform() {
-        System.out.println("Perform A");
-    }
+  public void perform() {
+    System.out.println("Perform A");
+  }
 
-    public void IBM() {
-        mediator.performIBM();
-    }
+  public void IBM() {
+    mediator.performIBM();
+  }
 }

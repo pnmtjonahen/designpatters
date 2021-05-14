@@ -17,24 +17,22 @@
 package nl.tjonahen.rekenaar.rpn;
 
 import java.util.List;
-
 import nl.tjonahen.rekenaar.command.Command;
 
 public class Term {
 
-    private final Num num = new Num();
-    private final Operation op = new Operation();
+  private final Num num = new Num();
+  private final Operation op = new Operation();
 
-    public String parse(final String str, final List<Command> script) throws ParseException {
-        String tmpstr = str;
-        if ("".equals(tmpstr)) {
-            return tmpstr;
-        }
-
-
-        tmpstr = num.parse(tmpstr, script);
-        tmpstr = op.parse(tmpstr, script);
-
-        return parse(tmpstr, script);
+  public String parse(final String str, final List<Command> script) throws ParseException {
+    String tmpstr = str;
+    if ("".equals(tmpstr)) {
+      return tmpstr;
     }
+
+    tmpstr = num.parse(tmpstr, script);
+    tmpstr = op.parse(tmpstr, script);
+
+    return parse(tmpstr, script);
+  }
 }

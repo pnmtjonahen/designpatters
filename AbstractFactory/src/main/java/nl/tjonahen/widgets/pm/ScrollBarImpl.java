@@ -18,6 +18,4 @@ package nl.tjonahen.widgets.pm;
 
 import nl.tjonahen.widgets.ScrollBar;
 
-public class ScrollBarImpl implements ScrollBar {
-
-}
+public class ScrollBarImpl implements ScrollBar {}

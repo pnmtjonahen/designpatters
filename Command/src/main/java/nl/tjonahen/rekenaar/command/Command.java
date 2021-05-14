@@ -25,10 +25,10 @@ import java.util.Stack;
  */
 public interface Command {
 
-    /**
-     * Execute the command.
-     *
-     * @param stack -
-     */
-    void execute(Stack<Double> stack);
+  /**
+   * Execute the command.
+   *
+   * @param stack -
+   */
+  void execute(Stack<Double> stack);
 }

@@ -18,24 +18,23 @@ package nl.tjonahen.widgets;
 
 public class WindowBridge implements Window {
 
-    private Window impl;
+  private Window impl;
 
-    public void setWidgetType(final WidgetEnum type) {
-        switch (type) {
-            case MOTIF:
-                impl = new nl.tjonahen.widgets.motif.WindowImpl();
-                break;
-            case PM:
-                impl = new nl.tjonahen.widgets.pm.WindowImpl();
-                break;
-        }
-
+  public void setWidgetType(final WidgetEnum type) {
+    switch (type) {
+      case MOTIF:
+        impl = new nl.tjonahen.widgets.motif.WindowImpl();
+        break;
+      case PM:
+        impl = new nl.tjonahen.widgets.pm.WindowImpl();
+        break;
     }
+  }
 
-    @Override
-    public void draw() {
-        if (impl != null) {
-            impl.draw();
-        }
+  @Override
+  public void draw() {
+    if (impl != null) {
+      impl.draw();
     }
+  }
 }

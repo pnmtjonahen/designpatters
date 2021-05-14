@@ -16,51 +16,46 @@
  */
 package nl.tjonahen;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import nl.tjonahen.builders.BungalowBuilder;
 import nl.tjonahen.builders.BunkerBuilder;
 import nl.tjonahen.builders.FlatBuilder;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 
-
-/**
- * Client deel van het builder pattern.
- *
- *
- */
+/** Client deel van het builder pattern. */
 public class GebouwenBuilderTest {
 
-    @Test
-    public void testFlatGebouw() {
-        /*
-         * Client creeert een Aannemer (director) en configureert het met een builder (concrete builder)
-         */
-        GebouwenBuilder concreteBuilder = new FlatBuilder();
+  @Test
+  public void testFlatGebouw() {
+    /*
+     * Client creeert een Aannemer (director) en configureert het met een builder (concrete builder)
+     */
+    GebouwenBuilder concreteBuilder = new FlatBuilder();
 
-        Aannemer kees = new Aannemer(concreteBuilder);
-        kees.construct();
+    Aannemer kees = new Aannemer(concreteBuilder);
+    kees.construct();
 
-        assertNotNull(concreteBuilder.getGebouw());
+    assertNotNull(concreteBuilder.getGebouw());
+  }
 
-    }
+  @Test
+  public void testBugalow() {
+    GebouwenBuilder concreteBuilder = new BungalowBuilder();
 
-    @Test
-    public void testBugalow() {
-        GebouwenBuilder concreteBuilder = new BungalowBuilder();
+    Aannemer kees = new Aannemer(concreteBuilder);
+    kees.construct();
 
-        Aannemer kees = new Aannemer(concreteBuilder);
-        kees.construct();
+    assertNotNull(concreteBuilder.getGebouw());
+  }
 
-        assertNotNull(concreteBuilder.getGebouw());
-    }
+  @Test
+  public void testBunker() {
+    GebouwenBuilder concreteBuilder = new BunkerBuilder();
 
-    @Test
-    public void testBunker() {
-        GebouwenBuilder concreteBuilder = new BunkerBuilder();
+    Aannemer kees = new Aannemer(concreteBuilder);
+    kees.construct();
 
-        Aannemer kees = new Aannemer(concreteBuilder);
-        kees.construct();
-
-        assertNotNull(concreteBuilder.getGebouw());
-    }
+    assertNotNull(concreteBuilder.getGebouw());
+  }
 }

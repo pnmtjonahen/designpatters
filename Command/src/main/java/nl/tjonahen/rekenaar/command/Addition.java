@@ -25,13 +25,13 @@ import java.util.Stack;
  */
 public class Addition implements Command {
 
-    /**
-     * Add two elements from the stack and pushes the result back on it.
-     *
-     * @param stack -
-     */
-    @Override
-    public void execute(final Stack<Double> stack) {
-        stack.push(stack.pop() + stack.pop());
-    }
+  /**
+   * Add two elements from the stack and pushes the result back on it.
+   *
+   * @param stack -
+   */
+  @Override
+  public void execute(final Stack<Double> stack) {
+    stack.push(stack.pop() + stack.pop());
+  }
 }

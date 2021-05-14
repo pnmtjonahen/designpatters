@@ -20,8 +20,7 @@ import nl.tjonahen.Visitor;
 
 public class Leaf {
 
-    public void accept(final Visitor v) {
-        v.visit(this);
-
-    }
+  public void accept(final Visitor v) {
+    v.visit(this);
+  }
 }

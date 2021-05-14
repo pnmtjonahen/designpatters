@@ -18,7 +18,7 @@ package nl.tjonahen;
 
 public class StdErroView implements Observer {
 
-    public void update(Document document) {
-        System.err.println(document.getText());
-    }
+  public void update(Document document) {
+    System.err.println(document.getText());
+  }
 }

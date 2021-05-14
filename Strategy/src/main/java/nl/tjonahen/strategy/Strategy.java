@@ -18,5 +18,5 @@ package nl.tjonahen.strategy;
 
 public interface Strategy {
 
-    void out(String input);
+  void out(String input);
 }

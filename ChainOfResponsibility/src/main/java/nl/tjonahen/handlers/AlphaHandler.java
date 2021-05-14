@@ -23,16 +23,16 @@ package nl.tjonahen.handlers;
  */
 public class AlphaHandler extends Handler {
 
-    public AlphaHandler(final Handler successor) {
-        super(successor);
-    }
+  public AlphaHandler(final Handler successor) {
+    super(successor);
+  }
 
-    @Override
-    public void handle(final String input) {
-        if (input.startsWith("@")) {
-            System.err.println(input.substring(1));
-        } else {
-            super.handle(input);
-        }
+  @Override
+  public void handle(final String input) {
+    if (input.startsWith("@")) {
+      System.err.println(input.substring(1));
+    } else {
+      super.handle(input);
     }
+  }
 }

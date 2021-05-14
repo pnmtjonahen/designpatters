@@ -18,14 +18,13 @@ package nl.tjonahen.base;
 
 public class View {
 
-    private final Application parent;
-    private final Document doc;
+  private final Application parent;
+  private final Document doc;
 
-    public View(final Application app, final Document doc) {
-        this.parent = app;
-        this.doc = doc;
-    }
+  public View(final Application app, final Document doc) {
+    this.parent = app;
+    this.doc = doc;
+  }
 
-    public void show() {
-    }
+  public void show() {}
 }

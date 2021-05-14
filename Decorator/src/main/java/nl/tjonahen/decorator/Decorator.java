@@ -18,14 +18,14 @@ package nl.tjonahen.decorator;
 
 public class Decorator implements VisualComponent {
 
-    private final VisualComponent nextComponent;
+  private final VisualComponent nextComponent;
 
-    @Override
-    public void draw() {
-        nextComponent.draw();
-    }
+  @Override
+  public void draw() {
+    nextComponent.draw();
+  }
 
-    public Decorator(final VisualComponent next) {
-        this.nextComponent = next;
-    }
+  public Decorator(final VisualComponent next) {
+    this.nextComponent = next;
+  }
 }

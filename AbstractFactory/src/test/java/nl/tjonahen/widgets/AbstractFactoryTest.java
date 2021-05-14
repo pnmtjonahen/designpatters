@@ -17,6 +17,7 @@
 package nl.tjonahen.widgets;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.junit.jupiter.api.Test;
 
 /**
@@ -26,28 +27,27 @@ import org.junit.jupiter.api.Test;
  */
 public class AbstractFactoryTest {
 
-    @Test
-    public void pmTest() {
-        final WidgetFactory widgetFactory = new nl.tjonahen.widgets.pm.WidgetFactoryImpl();
-        testWidgetFactory(widgetFactory);
-    }
+  @Test
+  public void pmTest() {
+    final WidgetFactory widgetFactory = new nl.tjonahen.widgets.pm.WidgetFactoryImpl();
+    testWidgetFactory(widgetFactory);
+  }
 
-    @Test
-    public void motifTest() {
-        final WidgetFactory widgetFactory = new nl.tjonahen.widgets.motif.WidgetFactoryImpl();
-        testWidgetFactory(widgetFactory);
-    }
+  @Test
+  public void motifTest() {
+    final WidgetFactory widgetFactory = new nl.tjonahen.widgets.motif.WidgetFactoryImpl();
+    testWidgetFactory(widgetFactory);
+  }
 
-    /**
-     * This is the actual test code using the AbstractFactory. How we get the concrete implementation is not part of the
-     * pattern.
-     *
-     * @param widgetFactory -
-     */
-    private void testWidgetFactory(final WidgetFactory widgetFactory) {
+  /**
+   * This is the actual test code using the AbstractFactory. How we get the concrete implementation
+   * is not part of the pattern.
+   *
+   * @param widgetFactory -
+   */
+  private void testWidgetFactory(final WidgetFactory widgetFactory) {
 
-        assertNotNull(widgetFactory.createWindow());
-        assertNotNull(widgetFactory.createScrollBar());
-
-    }
+    assertNotNull(widgetFactory.createWindow());
+    assertNotNull(widgetFactory.createScrollBar());
+  }
 }

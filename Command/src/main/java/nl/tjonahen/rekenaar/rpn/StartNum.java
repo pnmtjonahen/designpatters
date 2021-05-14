@@ -17,17 +17,16 @@
 package nl.tjonahen.rekenaar.rpn;
 
 import java.util.List;
-
 import nl.tjonahen.rekenaar.command.Command;
 import nl.tjonahen.rekenaar.command.Pop;
 
 public class StartNum extends Num {
 
-    private final Term term = new Term();
+  private final Term term = new Term();
 
-    public String parse(final String str, final List<Command> script) throws ParseException {
-        final String tempstr = term.parse(super.parse(str, script), script);
-        script.add(new Pop());
-        return tempstr;
-    }
+  public String parse(final String str, final List<Command> script) throws ParseException {
+    final String tempstr = term.parse(super.parse(str, script), script);
+    script.add(new Pop());
+    return tempstr;
+  }
 }

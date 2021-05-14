@@ -21,5 +21,4 @@ package nl.tjonahen;
  *
  * @author Philippe Tjon-A-Hen philippe@tjonahen.nl
  */
-public class E {
-}
+public class E {}

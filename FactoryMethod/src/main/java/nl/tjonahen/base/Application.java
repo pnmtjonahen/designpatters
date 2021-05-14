@@ -19,57 +19,46 @@ package nl.tjonahen.base;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * FactoryMethod. Defines interface and let subclassing decide which class to instantiate.
- *
- *
- */
+/** FactoryMethod. Defines interface and let subclassing decide which class to instantiate. */
 public class Application {
 
-    private final List<Document> docs;
-    private Document doc;
-    private View view;
+  private final List<Document> docs;
+  private Document doc;
+  private View view;
 
-    public Application() {
-        this.docs = new ArrayList<>();
-    }
-    /**
-     * Application start methode deze start (tussen aanhalings tekens) de applicatie
-     *
-     */
-    public final void start() {
-        // Creer een standaard document;
-        doc = createDocument(this);
-        docs.add(doc);
-        view = createView(this, doc);
+  public Application() {
+    this.docs = new ArrayList<>();
+  }
+  /** Application start methode deze start (tussen aanhalings tekens) de applicatie */
+  public final void start() {
+    // Creer een standaard document;
+    doc = createDocument(this);
+    docs.add(doc);
+    view = createView(this, doc);
 
-        view.show();
-    }
+    view.show();
+  }
 
-    public void newDocument() {
-        doc = createDocument(this);
-        docs.add(doc);
-        view = createView(this, doc);
+  public void newDocument() {
+    doc = createDocument(this);
+    docs.add(doc);
+    view = createView(this, doc);
 
-        view.show();
-    }
+    view.show();
+  }
 
-    public void newView() {
-        view = createView(this, doc);
-        view.show();
-    }
+  public void newView() {
+    view = createView(this, doc);
+    view.show();
+  }
 
-    /**
-     * Default implementation van een factory method om een document te creeren.
-     */
-    public Document createDocument(final Application app) {
-        return new Document(app);
-    }
+  /** Default implementation van een factory method om een document te creeren. */
+  public Document createDocument(final Application app) {
+    return new Document(app);
+  }
 
-    /**
-     * Default implementatie van een factory method om een view te creeren.
-     */
-    public View createView(final Application app, final Document doc) {
-        return new View(app, doc);
-    }
+  /** Default implementatie van een factory method om een view te creeren. */
+  public View createView(final Application app, final Document doc) {
+    return new View(app, doc);
+  }
 }
