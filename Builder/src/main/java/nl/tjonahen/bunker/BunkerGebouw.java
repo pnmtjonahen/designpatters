@@ -16,6 +16,6 @@
  */
 package nl.tjonahen.bunker;
 
-import nl.tjonahen.IGebouw;
+import nl.tjonahen.Gebouw;
 
-public class BunkerGebouw implements IGebouw {}
+public class BunkerGebouw implements Gebouw {}

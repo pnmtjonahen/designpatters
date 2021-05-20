@@ -20,14 +20,14 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import nl.tjonahen.IGebouw;
+import nl.tjonahen.Gebouw;
 
 /**
  * Flat gebouw bestaat uit.
  *
  * <p>Verdiepingen met kamers en een trap omhoog en of en trap omlaag.
  */
-public class FlatGebouw implements IGebouw {
+public class FlatGebouw implements Gebouw {
 
   private final Map<Integer, Verdieping> verdiepingen;
   private final Set<Trap> trappenhuis;

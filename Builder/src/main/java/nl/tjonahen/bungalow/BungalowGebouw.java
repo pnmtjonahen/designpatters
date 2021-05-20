@@ -18,9 +18,9 @@ package nl.tjonahen.bungalow;
 
 import java.util.ArrayList;
 import java.util.List;
-import nl.tjonahen.IGebouw;
+import nl.tjonahen.Gebouw;
 
-public class BungalowGebouw implements IGebouw {
+public class BungalowGebouw implements Gebouw {
 
   private final List<Kamer> hal;
 

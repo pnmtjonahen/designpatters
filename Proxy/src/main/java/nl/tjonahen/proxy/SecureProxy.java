@@ -38,7 +38,7 @@ public class SecureProxy implements Service {
     if (mag) {
       next.doeHet();
     } else {
-      System.out.println("magniet Doe het..");
+      System.out.println("magniet");
     }
   }
 }

@@ -22,9 +22,9 @@ package nl.tjonahen;
  */
 public abstract class GebouwenBuilder {
 
-  protected IGebouw gebouw;
+  protected Gebouw gebouw;
 
-  public final IGebouw getGebouw() {
+  public final Gebouw getGebouw() {
     return gebouw;
   }
 

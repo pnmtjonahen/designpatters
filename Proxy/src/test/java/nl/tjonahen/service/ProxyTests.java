@@ -16,19 +16,47 @@
  */
 package nl.tjonahen.service;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import nl.tjonahen.proxy.SecureProxy;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ProxyTests {
+
+  private PrintStream originalSystemOut;
+  private ByteArrayOutputStream systemOutContent;
+
+  @BeforeEach
+  void redirectSystemOutStream() {
+    originalSystemOut = System.out;
+    systemOutContent = new ByteArrayOutputStream();
+    System.setOut(new PrintStream(systemOutContent));
+  }
+
+  @AfterEach
+  void restoreSystemOutStream() {
+    System.setOut(originalSystemOut);
+    System.out.println(systemOutContent.toString());
+  }
 
   @Test
   public void testenSecureProxy() {
     Service s = new SecureProxy(new ServiceImpl());
 
+    SecureProxy.mag = true;
     s.doeHet();
+    Assertions.assertTrue(systemOutContent.toString().contains("Doe het.."));
+  }
+
+  @Test
+  public void testenSecureProxyNotAllowed() {
+    Service s = new SecureProxy(new ServiceImpl());
 
     SecureProxy.mag = false;
-
     s.doeHet();
+    Assertions.assertTrue(systemOutContent.toString().contains("magniet"));
   }
 }

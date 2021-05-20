@@ -22,12 +22,13 @@ import java.util.List;
 public class Document {
 
   private String text = "";
-  private List<Observer> observers = new ArrayList<>();
+  private final List<Observer> observers = new ArrayList<>();
 
   private void notifyObservers() {
-    for (Observer observer : observers) {
-      observer.update(this);
-    }
+    observers.forEach(
+        observer -> {
+          observer.update(this);
+        });
   }
 
   public void addObserver(Observer o) {

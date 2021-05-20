@@ -56,7 +56,7 @@ public class Aannemer {
     builder.buildKamer(3, 17);
   }
 
-  public IGebouw createGebouw(final GebouwenBuilder builder) {
+  public Gebouw createGebouw(final GebouwenBuilder builder) {
     builder.buildGebouw();
     builder.buildKamer(0, 1);
     builder.buildKamer(0, 2);
